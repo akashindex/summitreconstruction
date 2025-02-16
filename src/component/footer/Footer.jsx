@@ -1,5 +1,7 @@
 import React from 'react';
 import { FaFacebookF } from "react-icons/fa";
+import { MdOutlineEmail } from "react-icons/md";
+
 
 const Footer = () => {
     return (
@@ -9,8 +11,13 @@ const Footer = () => {
             <p className=''>7215 SW Bonita Rd</p>
             <p className=''>​Tigard, OR 97224</p>
             <p className=''>503-451-3544</p>
-            <div>
-                icon 1 icon 2
+            <div className='flex pt-[30px] gap-[20px]'>
+            <div className='px-[15px] py-[15px] rounded-full bg-[#5f616f] text-[#333645]'>
+                <FaFacebookF/>
+            </div>
+            <div className='px-[15px] py-[15px] rounded-full bg-[#5f616f] text-[#333645]'>
+            <MdOutlineEmail/>
+            </div>
             </div>
         </div>
         <div>
