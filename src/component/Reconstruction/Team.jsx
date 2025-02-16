@@ -3,7 +3,7 @@ import teamimage from "/src/assets/images/team.jpg";
 
 function Team() {
   return (
-    <div className="relative bg-cover bg-center py-16 px-6" style={{ backgroundImage: `url(${teamimage})` }}>
+    <div className="relative bg-cover bg-center font-worksans py-16 px-6" style={{ backgroundImage: `url(${teamimage})` }}>
       {/* Dark Overlay */}
       {/* <div className="absolute inset-0 bg-white bg-opacity-70"></div> */}
 

@@ -1,71 +1,46 @@
 import { useState } from "react";
 import bgimage1 from "/src/assets/images/holcomb6.jpg";
-import bgimage2 from "/src/assets/images/download.jpg";
-import bgimage3 from "/src/assets/images/bg.jpg";
+import bgimage2 from "/src/assets/images/bg.jpg";
+import bgimage3 from "/src/assets/images/download.jpg";
 
 function Home() {
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
-  const handleMouseEnter = (index) => {
-    setHoveredIndex(index);
-  };
-
-  const handleMouseLeave = () => {
-    setHoveredIndex(null);
-  };
-
   return (
-    <div className="grid grid-cols-2 gap-4 h-[65vh]">
-      {/* First Image (Row Span 2) */}
-      <div
-        className="bg-cover bg-center w-full flex items-center justify-center row-span-2 relative overflow-hidden"
-        style={{ backgroundImage: `url(${bgimage1})` }}
-        onMouseEnter={() => handleMouseEnter(0)}
-        onMouseLeave={handleMouseLeave}
-      >
-        {hoveredIndex === 0 && (
-          <div className="absolute inset-0 bg-black bg-opacity-30 backdrop-blur-sm flex flex-col items-center justify-center">
-            <h1 className="text-white text-3xl font-bold">Hello</h1>
-            <p className="text-white text-lg text-center">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non, quibusdam?
-            </p>
-          </div>
-        )}
-      </div>
+    <div className="grid grid-cols-2 grid-rows-2 gap-2 h-[70vh] font-worksans mb-[10px]">
+      {[{ image: bgimage1, title: "Mitigation / Restoration", text: "24/7 Mitigation & Restoration" },
+        { image: bgimage2, title: "Construction", text: "Specializing in HOA & multi-family repairs from small projects to full rehabs" },
+        { image: bgimage3, title: "Projects", text: "Specializing in Apartment repairs from small projects to full rehabs" }
+      ].map((item, index) => (
+        <div
+          key={index}
+          className={`bg-cover bg-center w-full h-full flex items-center justify-center relative overflow-none ${
+            index === 0 ? "row-span-2" : ""
+          }`}
+          style={{ backgroundImage: `url(${item.image})` }}
+          onMouseEnter={() => setHoveredIndex(index)}
+          onMouseLeave={() => setHoveredIndex(null)}
+        >
+          {/* Background Blur & Overlay - Visible on Hover */}
+          <div
+            className={`absolute inset-0 bg-black transition-opacity duration-300 ${
+              hoveredIndex === index ? "bg-opacity-50 backdrop-blur-md" : "bg-opacity-0"
+            }`}
+          ></div>
 
-      {/* Second Image */}
-      <div
-        className="bg-cover bg-center w-full flex items-center justify-center relative overflow-hidden"
-        style={{ backgroundImage: `url(${bgimage2})` }}
-        onMouseEnter={() => handleMouseEnter(1)}
-        onMouseLeave={handleMouseLeave}
-      >
-        {hoveredIndex === 1 && (
-          <div className="absolute inset-0 bg-black bg-opacity-30 backdrop-blur-sm flex flex-col items-center justify-center">
-            <h1 className="text-white text-3xl font-bold">Hello</h1>
-            <p className="text-white text-lg text-center">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non, quibusdam?
+          {/* Text Content */}
+          <div className="absolute flex flex-col items-center text-center">
+            <h1 className="text-white text-[38px]">{item.title}</h1>
+            <p
+              className={`text-white text-[18px] w-[90%] text-center transition-opacity duration-300 ${
+                hoveredIndex === index ? "opacity-100" : "opacity-0"
+              }`}
+            >
+              {item.text}
             </p>
           </div>
-        )}
-      </div>
-
-      {/* Third Image */}
-      <div
-        className="bg-cover bg-center w-full flex items-center justify-center relative overflow-hidden"
-        style={{ backgroundImage: `url(${bgimage3})` }}
-        onMouseEnter={() => handleMouseEnter(2)}
-        onMouseLeave={handleMouseLeave}
-      >
-        {hoveredIndex === 2 && (
-          <div className="absolute inset-0 bg-black bg-opacity-30 backdrop-blur-sm flex flex-col items-center justify-center">
-            <h1 className="text-white text-3xl font-bold">Hello</h1>
-            <p className="text-white text-lg text-center">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non, quibusdam?
-            </p>
-          </div>
-        )}
-      </div>
+        </div>
+      ))}
     </div>
   );
 }
