@@ -3,10 +3,10 @@ import React from "react";
 function Contact() {
   return (
     <section className="bg-[#ffaa06]">
-    <div className=" py-16 px-6 w-[80%] mx-auto">
-      <div className="flex items-center justify-around">
+    <div className=" sm:py-16 sm:px-6 w-[80%] mx-auto max-sm:py-10">
+      <div className="flex items-center justify-around max-sm:flex-col">
         {/* Description */}
-        <p className="text-[26px] w-[70%]">
+        <p className="text-[26px] sm:w-[70%]">
           Summit Reconstruction focuses on bringing damaged and defective
           buildings back to life and original working order.
         </p>
