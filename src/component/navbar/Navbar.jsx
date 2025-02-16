@@ -44,23 +44,33 @@ function Navbar() {
                   <MdKeyboardArrowDown className="text-white" />
                 </div>
                 {openDropdown === "services" && (
-                  <div className="absolute bg-gray-900 shadow-md rounded-lg mt-2 py-2 w-48">
-                    <a href="#" className="block text-white px-4 py-2 hover:bg-gray-700">
-                     Lorem ipsum dolor sit amet.
-                    </a>
-                    <a href="#" className="block text-white px-4 py-2 hover:bg-gray-700">
-                    Lorem ipsum dolor sit amet.
-                    </a>
-                    <a href="#" className="block text-white px-4 py-2 hover:bg-gray-700">
-                    Lorem ipsum dolor sit amet.
-                    </a>
-                    <a href="#" className="block text-white px-4 py-2 hover:bg-gray-700">
-                    Lorem ipsum dolor sit amet.
-                    </a>
-                    <a href="#" className="block text-white px-4 py-2 hover:bg-gray-700">
-                    Lorem ipsum dolor sit amet.
-                    </a>
-                  </div>
+                  <div className="absolute bg-white z-40 mt-2 py-2 w-[280px] border border-gray-300 ">
+                  <a href="#" className="block text-gray-800 px-4 py-2 border-b border-gray-300">
+                    Apartment Renovation & Repair
+                  </a>
+                  <a href="#" className="block text-gray-800 px-4 py-2 border-b border-gray-300">
+                    Biohazard Disposal & Remediation
+                  </a>
+                  <a href="#" className="block text-gray-800 px-4 py-2 border-b border-gray-300">
+                    Commercial Plumbing Portland
+                  </a>
+                  <a href="#" className="block text-gray-800 px-4 py-2 border-b border-gray-300">
+                    Commercial Roofing & Siding Repair
+                  </a>
+                  <a href="#" className="block text-gray-800 px-4 py-2 border-b border-gray-300">
+                    Deck Repair & Remediation
+                  </a>
+                  <a href="#" className="block text-gray-800 px-4 py-2 border-b border-gray-300">
+                    Renovation & Repair for HOAs
+                  </a>
+                  <a href="#" className="block text-gray-800 px-4 py-2 border-b border-gray-300">
+                    Water Damage Restoration
+                  </a>
+                  <a href="#" className="block text-gray-800 px-4 py-2">
+                    Water, Mold, & Hazmat Remediation
+                  </a>
+                </div>
+                
                 )}
               </div>
 
@@ -74,11 +84,11 @@ function Navbar() {
                   <MdKeyboardArrowDown className="text-white" />
                 </div>
                 {openDropdown === "about" && (
-                  <div className="absolute bg-gray-900 shadow-md rounded-lg mt-2 py-2 w-48">
-                    <a href="#" className="block text-white px-4 py-2 hover:bg-gray-700">
+                  <div className="absolute bg-gray-900 shadow-md rounded-lg mt-2 z-40 py-2 w-[240px]">
+                    <a href="#" className="block text-white px-4 py-2 border-b border-gray-300">
                       Resources & News
                     </a>
-                    <a href="#" className="block text-white px-4 py-2 hover:bg-gray-700">
+                    <a href="#" className="block text-white px-4 py-2 border-b border-gray-300">
                       Meet The Team
                     </a>
                   </div>
@@ -121,18 +131,18 @@ function Navbar() {
             </a>
 
             {/* Mobile Services Dropdown */}
-            <div onClick={() => handleDropdownToggle("services")} className="block text-white w-full text-left py-2 cursor-pointer">
+            <div onClick={() => handleDropdownToggle("services")} className="block text-white w-full z-40 text-left py-2 cursor-pointer">
               Services <MdKeyboardArrowDown className="inline-block" />
             </div>
             {openDropdown === "services" && (
               <div className="bg-white py-2 w-full">
-                <a href="#" className="block text-white px-4 py-2 hover:bg-gray-700">
+                <a href="#" className="block text-white px-4 py-2">
                   Web Development
                 </a>
-                <a href="#" className="block text-white px-4 py-2 hover:bg-gray-700">
+                <a href="#" className="block text-white px-4 py-2">
                   SEO
                 </a>
-                <a href="#" className="block text-white px-4 py-2 hover:bg-gray-700">
+                <a href="#" className="block text-white px-4 py-2">
                   Mobile Apps
                 </a>
               </div>
@@ -144,10 +154,10 @@ function Navbar() {
             </div>
             {openDropdown === "about" && (
               <div className=" py-2 w-full">
-                <a href="#" className="block text-white px-4 py-2 hover:bg-gray-700">
+                <a href="#" className="block text-white px-4 py-2">
                   Resources & News
                 </a>
-                <a href="#" className="block text-white px-4 py-2 hover:bg-gray-700">
+                <a href="#" className="block text-white px-4 py-2">
                   Meet The Team
                 </a>
               </div>

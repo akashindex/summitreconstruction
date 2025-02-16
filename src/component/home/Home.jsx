@@ -24,11 +24,13 @@ function Home() {
         onMouseLeave={handleMouseLeave}
       >
         {hoveredIndex === 0 && (
-          <div className="absolute inset-0 bg-black bg-opacity-30 backdrop-blur-sm flex items-center justify-center">
+          <div className="absolute inset-0 bg-black bg-opacity-30 backdrop-blur-sm flex flex-col items-center justify-center">
             <h1 className="text-white text-3xl font-bold">Hello</h1>
+            <p className="text-white text-lg text-center">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non, quibusdam?
+            </p>
           </div>
         )}
-        <h1 className="text-white text-3xl font-bold">Hello</h1>
       </div>
 
       {/* Second Image */}
@@ -39,11 +41,13 @@ function Home() {
         onMouseLeave={handleMouseLeave}
       >
         {hoveredIndex === 1 && (
-          <div className="absolute inset-0 bg-black bg-opacity-30 backdrop-blur-sm flex items-center justify-center">
+          <div className="absolute inset-0 bg-black bg-opacity-30 backdrop-blur-sm flex flex-col items-center justify-center">
             <h1 className="text-white text-3xl font-bold">Hello</h1>
+            <p className="text-white text-lg text-center">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non, quibusdam?
+            </p>
           </div>
         )}
-        <h1 className="text-white text-3xl font-bold">Hello</h1>
       </div>
 
       {/* Third Image */}
@@ -54,11 +58,13 @@ function Home() {
         onMouseLeave={handleMouseLeave}
       >
         {hoveredIndex === 2 && (
-          <div className="absolute inset-0 bg-black bg-opacity-30 backdrop-blur-sm flex items-center justify-center">
+          <div className="absolute inset-0 bg-black bg-opacity-30 backdrop-blur-sm flex flex-col items-center justify-center">
             <h1 className="text-white text-3xl font-bold">Hello</h1>
+            <p className="text-white text-lg text-center">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non, quibusdam?
+            </p>
           </div>
         )}
-        <h1 className="text-white text-3xl font-bold">Hello</h1>
       </div>
     </div>
   );
