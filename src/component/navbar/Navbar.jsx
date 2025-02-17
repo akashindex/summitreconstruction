@@ -2,7 +2,7 @@ import { useState } from "react";
 import logo from "../../assets/images/download.png";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import Navtop from "./Navtop";
-
+import { Link } from "react-router-dom";
 function Navbar() {
   const [openDropdown, setOpenDropdown] = useState(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -38,9 +38,9 @@ function Navbar() {
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex space-x-4 items-center">
-              <a href="#" className="text-white px-4">
+              <Link to="/" className="text-white px-4">
                 Home
-              </a>
+              </Link>
 
               {/* Services Dropdown */}
               <div
@@ -49,7 +49,7 @@ function Navbar() {
                 onMouseLeave={handleMouseLeave}
               >
                 <div className="flex items-center px-4">
-                  <span className="text-white">Services</span>
+                  <Link to="/Services" className="text-white">Services</Link>
                   <MdKeyboardArrowDown className="text-white" />
                 </div>
                 {openDropdown === "services" && (

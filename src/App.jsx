@@ -5,7 +5,6 @@ import Services from "./pages/Services";
 
 function App() {
   return (
-    // check
     <Router>
       <Layout> 
         <Routes>
