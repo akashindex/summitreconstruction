@@ -9,6 +9,9 @@ export default {
       fontFamily: {
         worksans: ["Work Sans", "sans-serif"],
       },
+      listStyleType: {
+        square: 'square',  // Adds 'square' as a valid option for listStyleType
+      },
     },
   },
   plugins: [],
