@@ -1,14 +1,16 @@
 import React from 'react'
-import Home from "../component/home/Home";
-import Reconstruction from '../component/Reconstruction/Reconstruction';
+import Home from '../component/home/Home'
+import Reconstruction from '../component/Reconstruction/Reconstruction'
+import TestmonialComp from '../component/testmonialComp/TestmonialComp'
 
-const Homepage = () => {
+const HomePage = () => {
   return (
     <div>
-      <Home />
-      <Reconstruction />   
-       </div>
+      <Home/>
+      <Reconstruction/>
+      <TestmonialComp/>
+    </div>
   )
 }
 
-export default Homepage
+export default HomePage

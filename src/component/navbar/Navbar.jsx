@@ -104,7 +104,7 @@ function Navbar() {
               <a href="#" className="text-white px-4">
                 Join Our Team
               </a>
-              <a href="#" className="text-white px-4">
+              <a href="/Contact" className="text-white px-4">
                 Contact
               </a>
             </div>
