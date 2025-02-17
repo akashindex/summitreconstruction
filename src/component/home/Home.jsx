@@ -15,6 +15,7 @@ function Home() {
   };
 
   return (
+    <>
     <div className="grid grid-cols-2 gap-4 h-[65vh]">
       {/* First Image (Row Span 2) */}
       <div
@@ -67,6 +68,7 @@ function Home() {
         )}
       </div>
     </div>
+    </>
   );
 }
 

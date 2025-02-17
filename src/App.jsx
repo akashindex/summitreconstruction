@@ -1,10 +1,7 @@
-import { useState } from 'react'
 import './App.css'
 import Navbar from "./component/navbar/Navbar"; 
 import Footer from './component/footer/Footer';
-import Home from "./component/home/Home";
-import Reconstruction from './component/Reconstruction/Reconstruction';
-import TestmonialComp from './component/testmonialComp/TestmonialComp';
+import HomePage from './pages/HomePage';
 
 
 function App() {
@@ -12,9 +9,7 @@ function App() {
   return (
     <>
       <Navbar />
-      <Home />
-      <Reconstruction />
-      <TestmonialComp />
+      <HomePage />
       <Footer />
     </>
   );
