@@ -1,7 +1,8 @@
 import React from 'react';
 import Banner from './Banner';
 import Team from './Team';
-import Contact from './contact';
+import Contact from "./Contact";
+import Projects from './Projects';
 
 const Reconstruction = () => {
     return (
@@ -10,6 +11,7 @@ const Reconstruction = () => {
             <Banner />
             <Team />
             <Contact />
+            <Projects />
         </div>
         </section>
     );
