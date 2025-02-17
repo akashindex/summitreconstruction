@@ -21,9 +21,9 @@ function Joinus() {
           We are always looking for great new people to join our team. If you are
           interested in any of the following positions, please fill out the
           application below and bring it by or email it to{" "}
-          <a href="#" className="text-blue-600">
+          <a href="#" className="text-yellow-500">
             info@summitrecon.com
-          </a>.
+          </a>
         </p>
 
         {/* Job Listings */}
