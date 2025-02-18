@@ -50,9 +50,9 @@ function Navbar() {
               >
                 <div className="flex items-center px-4">
                   <Link to="/Services" className="text-white">Services</Link>
-                  <MdKeyboardArrowDown className="text-white" />
+                  {/* <MdKeyboardArrowDown className="text-white" /> */}
                 </div>
-                {openDropdown === "services" && (
+                {/* {openDropdown === "services" && (
                   <div className="absolute bg-white z-40 mt-2 py-2 w-[280px] border border-gray-300">
                     {[
                       "Apartment Renovation & Repair",
@@ -73,28 +73,10 @@ function Navbar() {
                       </a>
                     ))}
                   </div>
-                )}
+                )} */}
               </div>
 
-              {/* About Smith Dropdown */}
-              <div
-                className="relative cursor-pointer"
-                onMouseEnter={() => handleMouseEnter("about")}
-                onMouseLeave={handleMouseLeave}
-              >
-                <div className="flex items-center px-4">
-                  <span className="text-white">About Smith</span>
-                  <MdKeyboardArrowDown className="text-white" />
-                </div>
-                {openDropdown === "about" && (
-                  <div className="absolute bg-white mt-2 z-40 py-2 w-[240px] border border-gray-300">
-                    <a href="#" className="block text-gray-900 px-4 py-2 border-b border-gray-300">
-                      Resources & News
-                    </a>
-                   
-                  </div>
-                )}
-              </div>
+           
 
               <Link to="/our-project" className="text-white px-4">
                 Our Project
