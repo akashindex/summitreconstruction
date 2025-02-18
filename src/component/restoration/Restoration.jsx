@@ -4,7 +4,7 @@ import { FaCheck } from "react-icons/fa";
 const Restoration = () => {
   return (
     <>
-      <div className="flex flex-col pb-[50px]">
+      <div className="flex flex-col pb-[50px] font-worksans">
         <div className="flex items-center flex-col pt-[50px] pb-[36px] gap-[10px]">
           <h1 className="text-[44px]">24/7 Restoration Services</h1>
           <div className="w-[100%] max-w-[12%] h-[1px] bg-black"></div>
