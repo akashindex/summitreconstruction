@@ -11,6 +11,8 @@ function ContactForm() {
     agreed: false,
   });
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
     setFormData({
@@ -19,13 +21,27 @@ function ContactForm() {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form Submitted:", formData);
+
+    if (!formData.agreed) {
+      alert("You must agree to the privacy policy.");
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    console.log("Form Data Before API Call:", formData);
+
+    // Simulating API call
+    setTimeout(() => {
+      console.log("Mock API Response: Success", formData);
+      setIsSubmitting(false);
+    }, 2000);
   };
 
   return (
-    <div className="max-w-lg mx-auto p-6 bg-white shadow-lg rounded-lg font-worksans">
+    <div className="w-full md:max-w-lg mx-auto p-6 bg-white shadow-lg rounded-lg font-worksans">
       <h2 className="text-2xl font-worksans text-gray-900 text-center">Contact Us</h2>
       <p className="mt-2 text-gray-600 text-center">We'd love to hear from you!</p>
       <form onSubmit={handleSubmit} className="mt-6 space-y-4">
@@ -37,6 +53,7 @@ function ContactForm() {
             value={formData.firstName}
             onChange={handleChange}
             className="w-1/2 p-2 border rounded-md focus:ring focus:ring-indigo-200 outline-none"
+            required
           />
           <input
             type="text"
@@ -45,6 +62,7 @@ function ContactForm() {
             value={formData.lastName}
             onChange={handleChange}
             className="w-1/2 p-2 border rounded-md focus:ring focus:ring-indigo-200 outline-none"
+            required
           />
         </div>
         <input
@@ -62,9 +80,10 @@ function ContactForm() {
           value={formData.email}
           onChange={handleChange}
           className="w-full p-2 border rounded-md focus:ring focus:ring-indigo-200 outline-none"
+          required
         />
         <input
-          type="tel"
+          type="number"
           name="phone"
           placeholder="Phone Number"
           value={formData.phone}
@@ -86,6 +105,7 @@ function ContactForm() {
             checked={formData.agreed}
             onChange={handleChange}
             className="size-5"
+            required
           />
           <label className="text-sm text-gray-600">
             I agree to the <a href="#" className="text-[#f4a62a] font-semibold">privacy policy</a>.
@@ -94,8 +114,9 @@ function ContactForm() {
         <button
           type="submit"
           className="w-full bg-[#f4a62a] text-white py-2 rounded-md hover:bg-yellow-600"
+          disabled={isSubmitting}
         >
-          Submit
+          {isSubmitting ? "Submitting..." : "Submit"}
         </button>
       </form>
     </div>

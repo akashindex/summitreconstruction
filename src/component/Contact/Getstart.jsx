@@ -10,7 +10,7 @@ function Getstart() {
         <span className="text-[#f4a62a] "> <a href="#">Contact us for a FREE estimate</a></span> so we can get started at identifying the problem,
         repairing the issue, and preventing it from happening again.
       </p>
-      <div className='flex mt-20 justify-evenly gap-5 items-center'>
+      <div className='md:flex mt-20 justify-evenly gap-5 items-center'>
       <div className="flex flex-col ">
         <iframe
           title="Google Map"

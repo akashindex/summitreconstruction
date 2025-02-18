@@ -6,6 +6,10 @@ import Contactpage from "./pages/Contactpage";
 import Brandpage from "./pages/Brandpage";
 import Holcombpage from "./pages/Holcombpage";
 import Montclairpage from "./pages/Montclairpage";
+import Projectspage from "./pages/Projectspage";
+import Courtyardpage from "./pages/Courtyardpage";
+import Sorrentopage from "./pages/Sorrentopage";
+
 
 function App() {
   return (
@@ -18,6 +22,9 @@ function App() {
           <Route path="/Avebrand" element={<Brandpage />} />
           <Route path="/Holcomb" element={<Holcombpage />} />
           <Route path="/Montclair" element={<Montclairpage />} />
+          <Route path="/projects" element={<Projectspage />} />
+          <Route path="/Courtyard" element={<Courtyardpage />} />
+          <Route path="/Sorrento" element={<Sorrentopage />} />
         </Routes>
       </Layout>
     </Router>
