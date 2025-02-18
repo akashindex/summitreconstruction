@@ -22,14 +22,14 @@ function Home() {
           onMouseEnter={() => setHoveredIndex(index)}
           onMouseLeave={() => setHoveredIndex(null)}
         >
-          {/* Background Blur & Overlay - Visible on Hover */}
+       
           <div
             className={`absolute inset-0 bg-black transition-opacity duration-300 ${
               hoveredIndex === index ? "bg-opacity-50 backdrop-blur-md" : "bg-opacity-0"
             }`}
           ></div>
 
-          {/* Text Content */}
+       
           <div className="absolute flex flex-col items-center text-center">
             <h1 className="text-white text-[38px]">{item.title}</h1>
             <p

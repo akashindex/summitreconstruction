@@ -91,19 +91,15 @@ function Navbar() {
                     <a href="#" className="block text-gray-900 px-4 py-2 border-b border-gray-300">
                       Resources & News
                     </a>
-                    <a href="#" className="block text-gray-900 px-4 py-2 border-b border-gray-300">
-                      Meet The Team
-                    </a>
+                   
                   </div>
                 )}
               </div>
 
-              <a href="#" className="text-white px-4">
+              <Link to="/our-project" className="text-white px-4">
                 Our Project
-              </a>
-              <a href="#" className="text-white px-4">
-                Join Our Team
-              </a>
+              </Link>
+             
               <a href="/Contact" className="text-white px-4">
                 Contact
               </a>
