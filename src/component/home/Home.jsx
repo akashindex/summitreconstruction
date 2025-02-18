@@ -2,9 +2,15 @@ import { useState } from "react";
 import bgimage1 from "/src/assets/images/holcomb6.jpg";
 import bgimage2 from "/src/assets/images/bg.jpg";
 import bgimage3 from "/src/assets/images/download.jpg";
+import { useNavigate } from "react-router-dom";
 
 function Home() {
   const [hoveredIndex, setHoveredIndex] = useState(null);
+  const navigate = useNavigate();
+
+  const handleImgClick = () => {
+    navigate('/Services');  // Navigate to the /Services page
+  };
 
   return (
     <>
@@ -21,6 +27,7 @@ function Home() {
           style={{ backgroundImage: `url(${item.image})` }}
           onMouseEnter={() => setHoveredIndex(index)}
           onMouseLeave={() => setHoveredIndex(null)}
+          onClick={handleImgClick}
         >
           {/* Background Blur & Overlay - Visible on Hover */}
           <div
