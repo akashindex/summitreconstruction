@@ -159,33 +159,15 @@ function Navbar() {
               </div>
             )}
 
-            {/* Mobile About Smith Dropdown */}
-            <div
-              onClick={() => handleMobileDropdownToggle("about")}
-              className="block text-white flex justify-between items-center cursor-pointer py-2"
-            >
-              About Smith <MdKeyboardArrowDown className="text-white" />
-            </div>
-            {openDropdown === "about" && (
-              <div className="bg-white py-2 w-full">
-                <a href="#" className="block text-gray-900 px-4 py-2 border-b border-gray-300">
-                  Resources & News
-                </a>
-                <a href="#" className="block text-gray-900 px-4 py-2 border-b border-gray-300">
-                  Meet The Team
-                </a>
-              </div>
-            )}
+           
 
-            <a href="#" className="block text-white">
+            <Link to="/services" className="block text-white">
               Our Project
-            </a>
-            <a href="#" className="block text-white">
-              Join Our Team
-            </a>
-            <a href="#" className="block text-white">
+            </Link>
+        
+            <Link to="/Contact" className="block text-white">
               Contact
-            </a>
+            </Link>
           </div>
         </div>
       </nav>
