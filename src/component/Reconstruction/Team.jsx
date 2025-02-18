@@ -1,5 +1,6 @@
 import React from "react";
 import teamimage from "/src/assets/images/team.jpg";
+import { Link } from "react-router-dom";
 
 function Team() {
   return (
@@ -22,9 +23,12 @@ function Team() {
           <button className="flex-1 bg-[#fea905] text-[18px] text-white py-2 px-6 rounded transition">
             Learn More About Summit
           </button>
-          <button className="flex-1 bg-[#fea905] text-[18px] text-white py-2 px-6 rounded transition">
-            Meet Our Team
-          </button>
+          <Link to="/Contact" className="flex-1 bg-[#fea905] text-[18px] text-white py-2 px-6 rounded transition"> 
+           
+            Contact Us
+            </Link>
+           
+        
         </div>
       </div>
     </div>
