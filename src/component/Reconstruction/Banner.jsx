@@ -3,7 +3,7 @@ import React from "react";
 function Banner() {
   return (
     <div className="text-center pt-[35px] pb-[30px] width-[90%] mx-auto font-worksans">
-      <h1 className="text-[44px] my-[35px] text-[#333645]">
+      <h1 className="text-[36px] md:text-[44px] my-[35px] text-[#333645]">
         Summit Reconstruction & Restoration
       </h1>
       <div className="mt-6">

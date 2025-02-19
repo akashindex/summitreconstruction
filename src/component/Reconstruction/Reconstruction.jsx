@@ -4,7 +4,7 @@ import Team from './Team';
 import Contact from "./Contact";
 import Projects from './Projects';
 
-const Reconstruction = () => {
+const   Reconstruction = () => {
     return (
         <section>
         <div>
