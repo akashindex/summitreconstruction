@@ -21,7 +21,7 @@ function App() {
         {/* Main Site Layout */}
         <Route path="/" element={<Layout><Home /></Layout>} />
         <Route path="/Services" element={<Layout><Services /></Layout>} />
-        <Route path="/Contact" element={<Layout><Contactpage /></Layout>} />
+        <Route path="/contact" element={<Layout><Contactpage /></Layout>} />
         <Route path="/Avebrand" element={<Layout><Brandpage /></Layout>} />
         <Route path="/Holcomb" element={<Layout><Holcombpage /></Layout>} />
         <Route path="/Montclair" element={<Layout><Montclairpage /></Layout>} />

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { FaRegLightbulb } from "react-icons/fa";
 import { FiMessageCircle } from "react-icons/fi";
 import { BsEmojiSmile } from "react-icons/bs";
-
+import { Link } from "react-router-dom";
 const ChooseUs = () => {
     const [activeTab, setActiveTab] = useState(0);
 
@@ -58,7 +58,10 @@ const ChooseUs = () => {
                 </div>
                 <div className="pt-[40px]">
                     <button className="px-4 py-2 bg-[#FFAA06] text-white hover:bg-yellow-600">
+                        <Link to="/contact">
                         LET'S WORK TOGETHER
+                        </Link>
+                        
                     </button>
                 </div>
             </div>

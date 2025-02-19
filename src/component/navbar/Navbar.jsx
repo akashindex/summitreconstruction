@@ -82,7 +82,7 @@ function Navbar() {
                 Our Project
               </Link>
              
-              <a href="/Contact" className="text-white px-4">
+              <a href="/contact" className="text-white px-4">
                 Contact
               </a>
             </div>

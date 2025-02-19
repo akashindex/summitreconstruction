@@ -4,7 +4,10 @@ import { Link } from "react-router-dom";
 
 function Team() {
   return (
-    <div className="relative bg-cover bg-center font-worksans py-16 px-6" style={{ backgroundImage: `url(${teamimage})` }}>
+    <div
+      className="relative bg-cover bg-center font-worksans py-16 px-6"
+      style={{ backgroundImage: `url(${teamimage})` }}
+    >
       {/* Dark Overlay */}
       {/* <div className="absolute inset-0 bg-white bg-opacity-70"></div> */}
 
@@ -15,20 +18,27 @@ function Team() {
         </h2>
         <div className="mt-[10px] w-[30%] h-[1px] bg-gray-800 mx-auto"></div>
         <p className="text-[#5f616f] text-[16px] md:text-[20px] mt-3">
-          Summit Reconstruction & Restoration was founded in 2012 with the vision of doing things the right way. We take pride in all of our employees, which is reflected in our quality of work.
+          At J&R NW Construction, our mission is to provide comprehensive water
+          mitigation and restoration services that restore peace of mind and
+          property value. From interior to exterior, we are dedicated to
+          delivering exceptional craftsmanship and complete solutions from start
+          to finish. We prioritize safety, efficiency, and customer
+          satisfaction, ensuring every project is completed with integrity and
+          excellence. Our commitment is to rebuild not just structures, but also
+          the trust and confidence of the communities we serve
         </p>
 
         {/* Buttons */}
         <div className="mt-6 flex max-sm:flex-col justify-center gap-4">
           <button className="flex-1 bg-[#fea905] text-[18px] text-white py-2 px-6 rounded transition">
-            Learn More About Summit
+            Learn More 
           </button>
-          <Link to="/Contact" className="flex-1 bg-[#fea905] text-[18px] text-white py-2 px-6 rounded transition"> 
-           
+          <Link
+            to="/Contact"
+            className="flex-1 bg-[#fea905] text-[18px] text-white py-2 px-6 rounded transition"
+          >
             Contact Us
-            </Link>
-           
-        
+          </Link>
         </div>
       </div>
     </div>
