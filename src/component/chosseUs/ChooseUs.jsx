@@ -32,7 +32,7 @@ const ChooseUs = () => {
             </div>
 
             {/* Tabs */}
-            <div className="flex gap-1 justify-center mb-6">
+            <div className="max-sm:px-4 flex max-sm:flex-col gap-1 justify-center mb-6">
                 {tabContent.map((tab, index) => (
                     <button
                         key={index}

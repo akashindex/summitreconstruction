@@ -4,9 +4,9 @@ import { FaCheck } from "react-icons/fa";
 const Restoration = () => {
   return (
     <>
-      <div className="flex flex-col pb-[50px] font-worksans">
+      <div className="px-[16px] flex flex-col pb-[50px] font-worksans">
         <div className="flex items-center flex-col pt-[50px] pb-[36px] gap-[10px]">
-          <h1 className="text-[44px]">24/7 Restoration Services</h1>
+          <h1 className="text-[36px] md:text-[44px] text-center">24/7 Restoration Services</h1>
           <div className="w-[100%] max-w-[12%] h-[1px] bg-black"></div>
         </div>
         <div className="text-[center] flex flex-col items-center gap-[10px]">
@@ -24,55 +24,55 @@ const Restoration = () => {
         </div>
         <div className="flex justify-center pt-[40px]">
           <div className="">
-            <div className="flex gap-[20px] pr-[270px] items-center text-[#666666] pb-[10px] text-[18px]">
+            <div className="flex gap-[20px] md:pr-[270px] items-center text-[#666666] pb-[10px] text-[18px]">
               <FaCheck style={{ color: "yellow" }} />
               24/7 Emergency Response – 365 Days A Year
             </div>
-            <div className="flex gap-[20px] pr-[270px] items-center text-[#FFAA06] pb-[10px] text-[18px]">
+            <div className="flex gap-[20px] md:pr-[270px] items-center text-[#FFAA06] pb-[10px] text-[18px]">
               <FaCheck style={{ color: "yellow" }} />
               Dry Outs, Dehumidification, & Water Extraction
             </div>
-            <div className="flex gap-[20px] pr-[270px] items-center  text-[#FFAA06] pb-[10px] text-[18px]">
+            <div className="flex gap-[20px] md:pr-[270px] items-center  text-[#FFAA06] pb-[10px] text-[18px]">
               <FaCheck style={{ color: "yellow" }} />
               Mold Remediation
             </div>
-            <div className="flex gap-[20px] pr-[270px] items-center  text-[#FFAA06] pb-[10px] text-[18px]">
+            <div className="flex gap-[20px] md:pr-[270px] items-center  text-[#FFAA06] pb-[10px] text-[18px]">
               <FaCheck style={{ color: "yellow" }} />
               Biohazard Remediation & Disposalr
             </div>
-            <div className="flex gap-[20px] pr-[270px] items-center text-[#666666] pb-[10px] text-[18px]">
+            <div className="flex gap-[20px] md:pr-[270px] items-center text-[#666666] pb-[10px] text-[18px]">
               <FaCheck style={{ color: "yellow" }} />
               Leak Investigation
             </div>
-            <div className="flex gap-[20px] pr-[270px] items-center text-[#666666] pb-[10px] text-[18px]">
+            <div className="flex gap-[20px] md:pr-[270px] items-center text-[#666666] pb-[10px] text-[18px]">
               <FaCheck style={{ color: "yellow" }} />
               Board Up Services & Roof Tarping
             </div>
-            <div className="flex gap-[20px] pr-[270px] items-center text-[#666666] pb-[10px] text-[18px]">
+            <div className="flex gap-[20px] md:pr-[270px] items-center text-[#666666] pb-[10px] text-[18px]">
               <FaCheck style={{ color: "yellow" }} />
               Vehicle Impact, Structural Damage, & Earthquake Damage
             </div>
-            <div className="flex gap-[20px] pr-[270px] items-center text-[#666666] pb-[10px] text-[18px]">
+            <div className="flex gap-[20px] md:pr-[270px] items-center text-[#666666] pb-[10px] text-[18px]">
               <FaCheck style={{ color: "yellow" }} />
               Quality Interior & Exterior Build Back
             </div>
-            <div className="flex gap-[20px] pr-[270px] items-center text-[#666666] pb-[10px] text-[18px]">
+            <div className="flex gap-[20px] md:pr-[270px] items-center text-[#666666] pb-[10px] text-[18px]">
               <FaCheck style={{ color: "yellow" }} />
               Insurance Repairs – We Fight For You & Represent Your Interests!
             </div>
-            <div className="flex gap-[20px] pr-[270px] items-center  text-[#FFAA06] pb-[10px] text-[18px]">
+            <div className="flex gap-[20px] md:pr-[270px] items-center  text-[#FFAA06] pb-[10px] text-[18px]">
               <FaCheck style={{ color: "yellow" }} />
               Fire & Smoke Damage Repairs
             </div>
-            <div className="flex gap-[20px] pr-[270px] items-center  text-[#FFAA06] pb-[10px] text-[18px]">
+            <div className="flex gap-[20px] md:pr-[270px] items-center  text-[#FFAA06] pb-[10px] text-[18px]">
               <FaCheck style={{ color: "yellow" }} />
               Renovation & Repair for HOAS
             </div>
-            <div className="flex gap-[20px] pr-[270px] items-center  text-[#FFAA06] pb-[10px] text-[18px]">
+            <div className="flex gap-[20px] md:pr-[270px] items-center  text-[#FFAA06] pb-[10px] text-[18px]">
               <FaCheck style={{ color: "yellow" }} />
               Commercial Plumbing
             </div>
-            <div className="flex gap-[20px] pr-[270px] items-center  text-[#FFAA06] pb-[10px] text-[18px]">
+            <div className="flex gap-[20px] md:pr-[270px] items-center  text-[#FFAA06] pb-[10px] text-[18px]">
               <FaCheck style={{ color: "yellow" }} />
               Apartment Renovation & Repair
             </div>
