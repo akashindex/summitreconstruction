@@ -38,7 +38,7 @@ const AdminDashboard = () => {
             </li>
             <li className="mb-6">
               <a
-                href="/admin/settings"
+                href="/admin/project"
                 className="text-lg hover:text-indigo-200 transition duration-300"
               >
                 Projects
@@ -46,7 +46,7 @@ const AdminDashboard = () => {
             </li>
             <li className="mb-6">
               <a
-                href="/admin/settings"
+                href="/admin/message"
                 className="text-lg hover:text-indigo-200 transition duration-300"
               >
                 Messages

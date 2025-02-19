@@ -78,7 +78,7 @@ function Navbar() {
 
            
 
-              <Link to="/our-project" className="text-white px-4">
+              <Link to="/projects" className="text-white px-4">
                 Our Project
               </Link>
              
