@@ -1,32 +1,37 @@
 import React, { useState, useEffect } from "react";
 
 const ConstructionServices = () => {
-  // State for services (initially hardcoded, can be fetched from an API)
   const [services, setServices] = useState([
     {
-      title: "Construction Defect Repair",
+      title: "Mitigation and restoration",
       description: "We identify and repair construction defects to ensure the durability and safety of your building.",
-      image: "/src/assets/images/holcomb6.jpg",
+      image: "/src/assets/images/image0.jpeg",
     },
     {
-      title: "Major Rehabilitation Projects",
+      title: "Flooring/carpet",
       description: "Complete structural rehabilitation including roofing, siding, plumbing, and electrical repairs.",
-      image: "/src/assets/images/bg.jpg",
+      image: "/src/assets/images/image1.jpeg",
     },
     {
-      title: "Siding & Trim Repairs",
+      title: "Drywall/painting",
       description: "Enhance your property's exterior with professional siding and trim repair services.",
-      image: "/src/assets/images/download.jpg",
+            image: "/src/assets/images/image2.jpeg",
     },
     {
-      title: "Deck Rebuilds & Waterproofing",
+      title: "Interior/exterior finishing",
       description: "We construct and waterproof decks to ensure long-lasting durability and style.",
-      image: "/src/assets/images/92brand.jpg",
+            image: "/src/assets/images/image3.jpeg",
     },
     {
-      title: "Doors & Window Installations",
+      title: "Framing",
       description: "Professional installation of energy-efficient doors and windows for your property.",
-      image: "/src/assets/images/courtyard.jpg",
+            image: "/src/assets/images/image4.jpeg",
+    },
+    
+    {
+      title: "Emergency services",
+      description: "Professional installation of energy-efficient doors and windows for your property.",
+      image: "/src/assets/images/image5.jpeg",
     },
   ]);
 
@@ -54,7 +59,7 @@ const ConstructionServices = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <div key={index} className="bg-white shadow-lg rounded-xl overflow-hidden transition hover:shadow-2xl">
-              <img src={service.image} alt={service.title} className="w-full h-52 object-cover" />
+              <img src={service.image} alt={service.title} className="w-full h-auto object-cover" />
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-[#292B37]">{service.title}</h3>
                 <p className="text-gray-600 mt-2">{service.description}</p>
