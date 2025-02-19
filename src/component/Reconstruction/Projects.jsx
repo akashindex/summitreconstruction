@@ -12,10 +12,10 @@ const projects = [
 
 function Projects() {
     return (
-        <div className="text-center sm:mt-[95px] sm:mb-[50px] font-worksans w-[1200px] mx-auto">
+        <div className="pt-[40px] text-center sm:mb-[50px] font-worksans md:w-[1200px] mx-auto">
             <div className='mb-16'>
-                <h2 className="text-[46px] mb-4 text-gray-700">Recent Projects</h2>
-                <div className="w-[15%] mx-auto border-b-2 border-gray-600 mb-6"></div>
+                <h2 className="text-[36px] md:text-[46px] mb-4 text-gray-700">Recent Projects</h2>
+                <div className="w-[30%] md:w-[15%] mx-auto border-b-2 border-gray-600 mb-6"></div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-3 px-6">
