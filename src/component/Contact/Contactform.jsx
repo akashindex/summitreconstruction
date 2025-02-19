@@ -12,6 +12,7 @@ function ContactForm() {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [responseMessage, setResponseMessage] = useState("");
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -30,20 +31,47 @@ function ContactForm() {
     }
 
     setIsSubmitting(true);
+    setResponseMessage("");
 
-    console.log("Form Data Before API Call:", formData);
+    try {
+      const response = await fetch("http://localhost:5656/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
 
-    // Simulating API call
-    setTimeout(() => {
-      console.log("Mock API Response: Success", formData);
-      setIsSubmitting(false);
-    }, 2000);
+      const data = await response.json();
+
+      if (response.ok) {
+        setResponseMessage("Message sent successfully! ✅");
+        setFormData({
+          firstName: "",
+          lastName: "",
+          company: "",
+          email: "",
+          phone: "",
+          message: "",
+          agreed: false,
+        });
+      } else {
+        setResponseMessage(`Error: ${data.message || "Something went wrong"}`);
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      setResponseMessage("Failed to send message. Please try again.");
+    }
+
+    setIsSubmitting(false);
   };
 
   return (
     <div className="w-full md:max-w-lg mx-auto p-6 bg-white shadow-lg rounded-lg font-worksans">
       <h2 className="text-2xl font-worksans text-gray-900 text-center">Contact Us</h2>
       <p className="mt-2 text-gray-600 text-center">We'd love to hear from you!</p>
+      {responseMessage && <p className="text-center text-sm mt-2 text-green-600">{responseMessage}</p>}
+      
       <form onSubmit={handleSubmit} className="mt-6 space-y-4">
         <div className="flex gap-4">
           <input
