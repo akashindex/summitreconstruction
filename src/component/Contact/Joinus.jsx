@@ -1,6 +1,7 @@
 import React from 'react';
 import { TiTick } from "react-icons/ti";
 import bgjoinus from '../../assets/images/joinus.jpg';
+import { Link } from 'react-router-dom';
 
 const jobPositions = [
   "Skilled Carpenters",
@@ -15,14 +16,14 @@ function Joinus() {
     <section className="font-worksans bg-gray-100 py-16 px-6 text-center" style={{ backgroundImage: `url(${bgjoinus})` }}>
 
       <div className="w-[40%] mx-auto">
-        <h2 className="text-[44px] text-gray-900 uppercase">Join Summit</h2>
+        <h2 className="text-[44px] text-gray-900 uppercase">J&R NW Construction</h2>
         <div className="w-[130px] h-[2px] bg-gray-500 mx-auto my-4"></div>
         <p className="text-gray-700 text-[17px] leading-relaxed">
           We are always looking for great new people to join our team. If you are
           interested in any of the following positions, please fill out the
           application below and bring it by or email it to{" "}
           <a href="#" className="text-yellow-500">
-            info@summitrecon.com
+            info@J&R NW Construction.com
           </a>
         </p>
 
@@ -38,7 +39,10 @@ function Joinus() {
 
         {/* Apply Button */}
         <button className="mt-6 bg-yellow-500 p-[10px] text-white text-[14px] w-full transition duration-300">
-          APPLY NOW
+          <Link to="/contact">
+          Contact Us
+          </Link>
+        
         </button>
       </div>
     </section>

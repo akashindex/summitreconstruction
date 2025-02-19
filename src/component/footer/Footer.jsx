@@ -59,7 +59,7 @@ const Footer = () => {
             ​#SUMMIRI878JT
             </p>
             <div className='mt-20px text-[20px] font-normal'>
-                <p className='pt-[20px]'>© 2025 Summit</p>
+                <p className='pt-[20px]'>© 2025 J&R NW Construction</p>
                 <p>Reconstruction</p>
             </div>
         </div>

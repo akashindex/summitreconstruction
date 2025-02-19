@@ -22,7 +22,7 @@ function Getstart() {
           loading="lazy"
         ></iframe>
         <div className="">
-          <h2 className="text-[26px] my-[20px]">Summit Reconstruction</h2>
+          <h2 className="text-[26px] my-[20px]">J&R NW Constructionn</h2>
           <p className="text-gray-700 font-[20px]">7215 SW Bonita Rd</p>
           <p className="text-gray-700 font-[20px]">Tigard, OR 97224</p>
           <p className="text-gray-700 font-[20px]">503-451-3544</p>

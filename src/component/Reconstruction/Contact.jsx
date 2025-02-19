@@ -7,8 +7,7 @@ function Contact() {
       <div className="flex items-center max-sm:gap-[40px] justify-around max-sm:flex-col">
         {/* Description */}
         <p className="text-center text-[24px] md:text-[26px] sm:w-[70%]">
-          Summit Reconstruction focuses on bringing damaged and defective
-          buildings back to life and original working order.
+          J&R NW Construction  provide comprehensive water mitigation and restoration services that restore peace of mind and property value
         </p>
 
         {/* Contact Button */}
