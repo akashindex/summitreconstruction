@@ -1,16 +1,16 @@
 import React from 'react';
 import Gallery from '../92ndAve/Gallery';
 import Testimonials from "./Testimonials";
-import brandbg from '../../assets/images/brandbg.jpg';
-import galler1 from '../../assets/images/gallery1.jpg';
-import galler2 from '../../assets/images/gallery2.jpg';
-import galler3 from '../../assets/images/gallery3.jpg';
-import galler4 from '../../assets/images/gallery4.jpg';
-import galler5 from '../../assets/images/gallery5.jpg';
-import galler6 from '../../assets/images/gallery6.jpg';
-import galler7 from '../../assets/images/gallery7.jpg';
-import galler8 from '../../assets/images/gallery8.jpg';
-import galler9 from '../../assets/images/gallery9.jpg';
+import brandbg from '../../assets/images/new-1.jpeg';
+import galler1 from '../../assets/images/new-2.jpeg';
+import galler2 from '../../assets/images/new-5.jpeg';
+import galler3 from '../../assets/images/new-4.jpeg';
+import galler4 from '../../assets/images/new-6.jpeg';
+import galler5 from '../../assets/images/new-10.jpeg';
+import galler6 from '../../assets/images/new-1.jpeg';
+import galler7 from '../../assets/images/new-9.jpeg';
+import galler8 from '../../assets/images/new-8.jpeg';
+import galler9 from '../../assets/images/new-7.jpeg';
 
 const images = [galler1, galler2, galler3, galler4, galler5, galler6, galler7, galler8, galler9];
 

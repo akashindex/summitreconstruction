@@ -15,42 +15,147 @@ import AdminLogin from "./admin/AdminLogin";
 import AdminDashboard from "./admin/AdminDashboard";
 import PrivateRoute from "./admin/PrivateRoute";
 import AllProjects from "./admin/AllProjects";
+import AddService from "./admin/AddServices";
+import Projects from "./component/Reconstruction/Projects";
+import ProjectDetails from "./pages/ProjectDetails";
 
 function App() {
   return (
     <Router>
       <Routes>
         {/* Main Site Layout */}
-        <Route path="/" element={<Layout><Home /></Layout>} />
-        <Route path="/services" element={<Layout><Services /></Layout>} />
-        <Route path="/contact" element={<Layout><Contactpage /></Layout>} />
-        <Route path="/avebrand" element={<Layout><Brandpage /></Layout>} />
-        <Route path="/holcomb" element={<Layout><Holcombpage /></Layout>} />
-        <Route path="/montclair" element={<Layout><Montclairpage /></Layout>} />
-        <Route path="/projects" element={<Layout><Projectspage /></Layout>} />
-        <Route path="/courtyard" element={<Layout><Courtyardpage /></Layout>} />
-        <Route path="/sorrento" element={<Layout><Sorrentopage /></Layout>} />
-        <Route path="/centralpark" element={<Layout><Centralparkpage /></Layout>} />
+        <Route
+          path="/"
+          element={
+            <Layout>
+              <Home />
+            </Layout>
+          }
+        />
+        <Route
+          path="/services"
+          element={
+            <Layout>
+              <Services />
+            </Layout>
+          }
+        />
+        <Route
+          path="/contact"
+          element={
+            <Layout>
+              <Contactpage />
+            </Layout>
+          }
+        />
+        <Route
+          path="/avebrand"
+          element={
+            <Layout>
+              <Brandpage />
+            </Layout>
+          }
+        />
+        <Route
+          path="/holcomb"
+          element={
+            <Layout>
+              <Holcombpage />
+            </Layout>
+          }
+        />
+        <Route
+          path="/montclair"
+          element={
+            <Layout>
+              <Montclairpage />
+            </Layout>
+          }
+        />
+        <Route
+          path="/projects"
+          element={
+            <Layout>
+              <Projectspage />
+            </Layout>
+          }
+        />
+        <Route
+          path="/courtyard"
+          element={
+            <Layout>
+              <Courtyardpage />
+            </Layout>
+          }
+        />
+        <Route
+          path="/sorrento"
+          element={
+            <Layout>
+              <Sorrentopage />
+            </Layout>
+          }
+        />
+        <Route
+          path="/centralpark"
+          element={
+            <Layout>
+              <Centralparkpage />
+            </Layout>
+          }
+        />
 
+        <Route
+          path="/projects"
+          element={
+            <Layout>
+              <Projects />
+            </Layout>
+          }
+        />
+        <Route
+          path="/projects/:id"
+          element={
+            <Layout>
+              <ProjectDetails />
+            </Layout>
+          }
+        />
         {/* Admin Routes */}
         <Route path="/admin/login" element={<AdminLogin />} />
-        
-        {/* Private Admin Routes */}
-        <Route path="/admin/dashboard" element={
-          <PrivateRoute>
-            <AdminLayout>
-              <AdminDashboard />
-            </AdminLayout>
-          </PrivateRoute>
-        } />
+        <Route path="/admin/add-service" element={<AddService />} />
 
-        <Route path="/admin/project" element={
-          <PrivateRoute>
-            <AdminLayout>
-              <AllProjects />
-            </AdminLayout>
-          </PrivateRoute>
-        } />
+        {/* Private Admin Routes */}
+        <Route
+          path="/admin/dashboard"
+          element={
+            <PrivateRoute>
+              <AdminLayout>
+                <AdminDashboard />
+              </AdminLayout>
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/admin/add-service"
+          element={
+            <PrivateRoute>
+              <AdminLayout>
+                <AddService />
+              </AdminLayout>
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/admin/project"
+          element={
+            <PrivateRoute>
+              <AdminLayout>
+                <AllProjects />
+              </AdminLayout>
+            </PrivateRoute>
+          }
+        />
       </Routes>
     </Router>
   );

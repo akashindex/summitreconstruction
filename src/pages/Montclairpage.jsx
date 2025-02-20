@@ -1,5 +1,5 @@
 import React from 'react'
-import Montclair from '../component/92ndAve/Montclair'
+import Montclair from './ProjectDetails'
 
 function Montclairpage() {
   return (

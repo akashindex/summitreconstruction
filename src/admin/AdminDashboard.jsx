@@ -61,39 +61,7 @@ const AdminDashboard = () => {
 
   return (
     <div className="flex">
-      {/* Sidebar */}
-      <div className="w-64 bg-indigo-800 text-white h-screen p-6">
-        <h2 className="text-2xl font-bold mb-8">Admin Dashboard</h2>
-        <nav>
-          <ul>
-            <li className="mb-6">
-              <Link to="/admin/dashboard" className="text-lg hover:text-indigo-200 transition duration-300">
-                Dashboard
-              </Link>
-            </li>
-            <li className="mb-6">
-              <Link to="/admin/project" className="text-lg hover:text-indigo-200 transition duration-300">
-                Projects
-              </Link>
-            </li>
-            <li className="mb-6">
-              <Link to="/admin/services" className="text-lg hover:text-indigo-200 transition duration-300">
-                Services
-              </Link>
-            </li>
-            <li className="mb-6">
-              <Link to="/admin/message" className="text-lg hover:text-indigo-200 transition duration-300">
-                Messages
-              </Link>
-            </li>
-            <li className="mb-6">
-              <button onClick={handleLogout} className="text-lg w-full text-left hover:text-indigo-200 transition duration-300">
-                Logout
-              </button>
-            </li>
-          </ul>
-        </nav>
-      </div>
+    
 
       {/* Main Content */}
       <div className="flex-1 bg-gray-100 p-8">
@@ -119,9 +87,9 @@ const AdminDashboard = () => {
             
             <div className="flex gap-4">
            
-              <button onClick={handleAddService} className="bg-green-600 text-white px-4 py-2 rounded">
+              <Link to="/admin/add-service" className="bg-green-600 text-white px-4 py-2 rounded">
                 Add Service
-              </button>
+              </Link>
             </div>
              </div>
              
@@ -129,14 +97,14 @@ const AdminDashboard = () => {
 
           
             <div className="bg-white p-6 rounded-lg shadow-md">
-              <h2 className="text-xl font-bold text-gray-800 mb-4">All Users</h2>
+              <h2 className="text-xl font-bold text-gray-800 mb-4">All Service</h2>
               <table className="w-full border-collapse border border-gray-300">
                 <thead>
                   <tr className="bg-gray-200">
                     <th className="border border-gray-300 p-2">ID</th>
-                    <th className="border border-gray-300 p-2">Name</th>
-                    <th className="border border-gray-300 p-2">Email</th>
-                    <th className="border border-gray-300 p-2">Role</th>
+                    <th className="border border-gray-300 p-2">Service Name</th>
+                    <th className="border border-gray-300 p-2">Description</th>
+                    <th className="border border-gray-300 p-2">Created at</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -152,7 +120,7 @@ const AdminDashboard = () => {
                   ) : (
                     <tr>
                       <td colSpan="4" className="text-center text-gray-600 p-4">
-                        No users found
+                        No services found
                       </td>
                     </tr>
                   )}
