@@ -27,12 +27,12 @@ function OurProjects() {
                 style={{ backgroundImage: `url(${banner})` }}
             >
                 <div className="z-10 px-4 w-[60%] mx-auto">
-                    <h1 className="text-[48px]">OUR PROJECTS</h1>
+                    <h1 className="sm:text-[48px] max-sm:text-[32px]">OUR PROJECTS</h1>
                 </div>
             </div>
 
-            <div className="max-w-[1200px] mx-auto px-4 text-center py-12">
-                <p className="text-gray-600 text-lg md:text-xl leading-relaxed mb-8">
+            <div className="sm:w-[1200px] max-sm:w-[100%] mx-auto px-4 text-center py-12">
+                <p className="text-gray-600 sm:text-[22px] max-sm:text-[16px] leading-relaxed mb-8">
                     We transform spaces and revive structures with expertise and care. Our projects
                     range from restoring the beauty of historical buildings to reconstructing damaged
                     properties, all while prioritizing quality craftsmanship and customer satisfaction.
@@ -42,14 +42,14 @@ function OurProjects() {
                 </p>
             </div>
 
-            <div className="max-w-[1200px] mx-auto grid grid-cols-2 gap-4 px-4 mb-10">
+            <div className="sm:max-w-[1200px] mx-auto grid grid-cols-2 sm:gap-4 max-sm:gap-1 px-4 mb-10">
                 {images.map((image, index) => (
                     <Link key={index} to={image.link} className="relative overflow-hidden group cursor-pointer block">
 
                         <img 
                             src={image.src} 
                             alt={image.alt} 
-                            className="object-cover w-full h-[300px] transition-transform duration-300 group-hover:scale-105"
+                            className="object-cover w-full sm:h-[300px] max-sm:h-[150px] transition-transform duration-300 group-hover:scale-105"
                         />
 
                         <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">

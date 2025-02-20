@@ -67,7 +67,7 @@ function ContactForm() {
   };
 
   return (
-    <div className="w-full md:max-w-lg mx-auto p-6 bg-white shadow-lg rounded-lg font-worksans">
+    <div className="sm:w-[80%]  mx-auto p-6 bg-white shadow-lg rounded-lg font-worksans">
       <h2 className="text-2xl font-worksans text-gray-900 text-center">Contact Us</h2>
       <p className="mt-2 text-gray-600 text-center">We'd love to hear from you!</p>
       {responseMessage && <p className="text-center text-sm mt-2 text-green-600">{responseMessage}</p>}

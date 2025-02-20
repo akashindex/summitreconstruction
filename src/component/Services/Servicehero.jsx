@@ -1,5 +1,5 @@
 import React from 'react'
-import servicesbg from '../../assets/images/banner-services.jpg'
+import servicesbg from '../../assets/images/new-5.jpeg'
 
 function Servicehero() {
     return (

@@ -6,16 +6,16 @@ import { MdOutlineEmail } from "react-icons/md";
 const Footer = () => {
     return (
        <>
-       <div className='bg-[#333645] flex justify-evenly pt-[40px] text-[#666666] text-[17px]'>
+       <div className='bg-[#36366d] flex justify-evenly pt-[40px] text-[white] text-[17px]'>
         <div className='leading-7'>
             <p className=''>7215 SW Bonita Rd</p>
             <p className=''>​Tigard, OR 97224</p>
             <p className=''>503-451-3544</p>
             <div className='flex pt-[30px] gap-[20px]'>
-            <div className='px-[15px] py-[15px] rounded-full bg-[#5f616f] text-[#333645]'>
+            <div className='px-[15px] py-[15px] rounded-full bg-[white] text-[#333645]'>
                 <FaFacebookF/>
             </div>
-            <div className='px-[15px] py-[15px] rounded-full bg-[#5f616f] text-[#333645]'>
+            <div className='px-[15px] py-[15px] rounded-full bg-[white] text-[#333645]'>
             <MdOutlineEmail/>
             </div>
             </div>
@@ -34,18 +34,13 @@ const Footer = () => {
         <div>
         <p className=' text-[17px] font-medium'>Services</p>
         <ul className='flex flex-col pt-[20px] text-[17px] font-normal leading-7'>
-                <a href='#'>Commercial Roofing & Siding</a>
-                <a href='#'>Repair</a>
-                <a href='#'>Construction</a>
-                <a href='#'>Deck Repair & Remediation</a>
-                <a href='#'>Paint</a>
-                <a href='#'>Restoration</a>
-                <a href='#'>Rehabilitation</a>
-                <a href='#'>Reconstruction</a>
-                <a href='#'>Smoke Remediation</a>
-                <a href='#'>Water Damage Restoration</a>
-                <a href='#'>Water, Mold, & Hazmat</a>
-                <a href='#'>Remediation</a>
+                <a href='#'>Mitigation and restoration </a>
+                <a href='#'>Flooring/carpet</a>
+                <a href='#'>Drywall/painting </a>
+                <a href='#'>Interior/exterior finishing </a>
+                <a href='#'>Framing</a>
+                <a href='#'>Emergency services</a>
+              
             </ul>
         </div>
         <div className='text-right text-[17px] font-normal'>
