@@ -82,9 +82,9 @@ function Navbar() {
                 Our Project
               </Link>
              
-              <a href="/contact" className="text-white px-4">
+              <Link to="/contact" className="text-white px-4">
                 Contact
-              </a>
+              </Link>
             </div>
 
             {/* Mobile Menu Button */}
@@ -107,9 +107,9 @@ function Navbar() {
         {/* Mobile Dropdown Menu */}
         <div className={`md:hidden bg-[#292b37] ${isMobileMenuOpen ? "block" : "hidden"}`}>
           <div className="px-4 py-3 space-y-2">
-            <a href="#" className="block text-white">
+            <Link to="/" className="block text-white">
               Home
-            </a>
+            </Link>
 
             {/* Mobile Services Dropdown */}
             <div
