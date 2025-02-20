@@ -48,7 +48,7 @@ const AllServices = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 5;
   const [showModal, setShowModal] = useState(false);
-  const [newProject, setNewService] = useState({
+  const [newService, setNewService] = useState({
     title: "",
     description: "",
     images: [],
@@ -76,9 +76,9 @@ const AllServices = () => {
   const handleAddService = () => {
     const newProject = {
       id: projects.length + 1,
-      title: newProject.title,
-      description: newProject.description,
-      images: newProject.images,
+      title: newService.title,
+      description: newService.description,
+      images: newService.images,
     };
 
     setProjects([...projects, newProject]);
@@ -104,12 +104,12 @@ const AllServices = () => {
     <div className="p-6">
       {/* Header Section */}
       <div className="flex justify-between items-center mb-6">
-        <h1 className="text-3xl font-semibold">All Project</h1>
+        <h1 className="text-3xl font-semibold">All Services</h1>
         <button
           onClick={() => setShowModal(true)}
           className="bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition"
         >
-          Add New Project
+          Add New Service
         </button>
       </div>
 
@@ -118,7 +118,7 @@ const AllServices = () => {
         <table className="min-w-full border border-gray-200">
           <thead>
             <tr className="bg-gray-200">
-              <th className="py-3 px-6 border text-left">Project Title</th>
+              <th className="py-3 px-6 border text-left">Service Title</th>
               <th className="py-3 px-6 border text-left">Description</th>
               <th className="py-3 px-6 border text-left">Image</th>
               <th className="py-3 px-6 border text-center">Actions</th>
@@ -198,7 +198,7 @@ const AllServices = () => {
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
           <div className="bg-white p-6 rounded-lg shadow-lg w-1/3">
             <div className="flex justify-between mb-4">
-              <h2 className="text-xl font-semibold">Add New Project</h2>
+              <h2 className="text-xl font-semibold">Add New Service</h2>
               <button onClick={() => setShowModal(false)} className="text-red-500">
                 <FaTimes size={18} />
               </button>
@@ -207,14 +207,14 @@ const AllServices = () => {
               type="text"
               placeholder="Service Title"
               className="border p-2 w-full mb-3"
-              value={newProject.title}
-              onChange={(e) => setNewService({ ...newProject, title: e.target.value })}
+              value={newService.title}
+              onChange={(e) => setNewService({ ...newService, title: e.target.value })}
             />
             <textarea
               placeholder="Description"
               className="border p-2 w-full mb-3"
-              value={newProject.description}
-              onChange={(e) => setNewService({ ...newProject, description: e.target.value })}
+              value={newService.description}
+              onChange={(e) => setNewService({ ...newService, description: e.target.value })}
             />
             <input type="file" multiple onChange={handleImageUpload} className="mb-3" />
             <button onClick={handleAddService} className="bg-indigo-600 text-white px-4 py-2 rounded">

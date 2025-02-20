@@ -15,7 +15,8 @@ import AdminLogin from "./admin/AdminLogin";
 import AdminDashboard from "./admin/AdminDashboard";
 import PrivateRoute from "./admin/PrivateRoute";
 import AllProjects from "./admin/AllProjects";
-import AddService from "./admin/AddServices";
+import AllServices from "./admin/AllServices";
+import AddService from "./admin/ProjectModal";
 import Projects from "./component/Reconstruction/Projects";
 import ProjectDetails from "./pages/ProjectDetails";
 
@@ -152,6 +153,16 @@ function App() {
             <PrivateRoute>
               <AdminLayout>
                 <AllProjects />
+              </AdminLayout>
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/admin/services"
+          element={
+            <PrivateRoute>
+              <AdminLayout>
+                <AllServices />
               </AdminLayout>
             </PrivateRoute>
           }
