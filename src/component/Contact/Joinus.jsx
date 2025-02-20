@@ -15,10 +15,10 @@ function Joinus() {
   return (
     <section className="font-worksans bg-gray-100 py-16 px-6 text-center" style={{ backgroundImage: `url(${bgjoinus})` }}>
 
-      <div className="w-[40%] mx-auto">
-        <h2 className="text-[44px] text-gray-900 uppercase">J&R NW Construction</h2>
+      <div className="sm:w-[40%] mx-auto">
+        <h2 className="sm:text-[44px] text-gray-900 uppercase">J&R NW Construction</h2>
         <div className="w-[130px] h-[2px] bg-gray-500 mx-auto my-4"></div>
-        <p className="text-gray-700 text-[17px] leading-relaxed">
+        <p className="text-gray-700 sm:text-[17px] leading-relaxed">
           We are always looking for great new people to join our team. If you are
           interested in any of the following positions, please fill out the
           application below and bring it by or email it to{" "}
