@@ -7,15 +7,10 @@ function Banner() {
       J&R NW Construction
       </h1>
       <div className="mt-6">
-      <p className="text-[#ffaa06] text-[17px] uppercase">
+      <p className="text-[#36366d] font-bold text-[17px] uppercase">
         Office Line | 24/7 Emergency Line
       </p>
-      <a
-        href="#"
-        className="text-[16px] md:text-3xl font-semibold text-gray-600 mt-1 block"
-      >
-        503.451.3544
-      </a>
+    
       </div>
     </div>
   );

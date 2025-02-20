@@ -63,8 +63,7 @@ const ConstructionServices = () => {
         <h1 className="text-4xl font-semibold">Our Best Services</h1>
         <div className="w-12 h-[2px] bg-black my-2"></div>
         <p className="text-[#292B37] text-lg max-w-lg px-4">
-          Our Reconstruction Crews are experts in delivering high-quality
-          construction services.
+        Our Reconstruction Crews specialize in providing top-tier construction services with expertise and precision.
         </p>
       </div>
 
@@ -86,6 +85,7 @@ const ConstructionServices = () => {
                   {service.title}
                 </h3>
                 <p className="text-gray-600 mt-2">{service.description}</p>
+                <Link to="/contact"> <button className="my-2 bg-[#36366d] text-white text-center text-[18px] font-medium max-sm:w-full md:px-[40px] py-2 rounded ">Contact Us</button> </Link>
               </div>
             </div>
           ))}

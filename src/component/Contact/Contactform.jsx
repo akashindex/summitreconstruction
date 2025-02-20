@@ -136,12 +136,12 @@ function ContactForm() {
             required
           />
           <label className="text-sm text-gray-600">
-            I agree to the <a href="#" className="text-[#f4a62a] font-semibold">privacy policy</a>.
+            I agree to the <a href="#" className="text-[#36366d] font-semibold">privacy policy</a>.
           </label>
         </div>
         <button
           type="submit"
-          className="w-full bg-[#f4a62a] text-white py-2 rounded-md hover:bg-yellow-600"
+          className="w-full bg-[#36366d] text-white py-2 rounded-md hover:bg-yellow-600"
           disabled={isSubmitting}
         >
           {isSubmitting ? "Submitting..." : "Submit"}

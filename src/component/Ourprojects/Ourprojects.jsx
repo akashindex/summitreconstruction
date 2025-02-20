@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';  
-import banner from '../../assets/images/banner-home2.jpg';
+import banner from '../../assets/images/new-8.jpeg';
 
-import afterKitchen from '../../assets/images/92brand.jpg';
-import beforeKitchen from '../../assets/images/holcombdrive.jpg';
-import houseRenovation from '../../assets/images/mtclair2.jpg';
-import construction from '../../assets/images/courtyard.jpg';
-import sorrento from '../../assets/images/sorrento-fi.jpg';
-import centralpark from '../../assets/images/centralpark3.jpg';
+import afterKitchen from '../../assets/images/new-1.jpeg';
+import beforeKitchen from '../../assets/images/new-2.jpeg';
+import houseRenovation from '../../assets/images/new-5.jpeg';
+import construction from '../../assets/images/new-4.jpeg';
+import sorrento from '../../assets/images/new-10.jpeg';
+import centralpark from '../../assets/images/new-6.jpeg';
 
 const images = [
     { src: afterKitchen, alt: "92brand", link: "/Avebrand" },
@@ -26,6 +26,7 @@ function OurProjects() {
                 className="bg-cover bg-center h-[40vh] flex items-center font-worksans justify-center text-center text-white"
                 style={{ backgroundImage: `url(${banner})` }}
             >
+                
                 <div className="z-10 px-4 w-[60%] mx-auto">
                     <h1 className="sm:text-[48px] max-sm:text-[32px]">OUR PROJECTS</h1>
                 </div>
