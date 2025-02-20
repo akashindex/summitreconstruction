@@ -6,33 +6,33 @@ const ConstructionServices = () => {
     {
       title: "Mitigation and restoration",
       description: "We assess and resolve construction issues to enhance the strength, safety, and longevity of your building.",
-      image: "/src/assets/images/image0.jpeg",
+      image: "./src/assets/images/image0.jpeg",
     },
     {
       title: "Flooring/carpet",
       description: "We offer expert installation and restoration of flooring and carpets, ensuring durability, style, and comfort for your space",
-      image: "/src/assets/images/image1.jpeg",
+      image: "./src/assets/images/image1.jpeg",
     },
     {
       title: "Drywall/painting",
       description: "We provide professional drywall installation, repairs, and painting services to create a flawless and polished finish for your space",
-            image: "/src/assets/images/image2.jpeg",
+            image: "./src/assets/images/image2.jpeg",
     },
     {
       title: "Interior/exterior finishing",
       description: "We deliver high-quality finishing touches for both interiors and exteriors, enhancing aesthetics, durability, and overall appeal",
-            image: "/src/assets/images/image3.jpeg",
+            image: "./src/assets/images/image3.jpeg",
     },
     {
       title: "Framing",
       description: "We build strong and precise structural frameworks to ensure stability, durability, and seamless construction for your project",
-            image: "/src/assets/images/image4.jpeg",
+            image: "./src/assets/images/image4.jpeg",
     },
     
     {
       title: "Emergency services",
       description: "We provide rapid response solutions for urgent repairs and disaster recovery, ensuring safety and minimizing damage",
-      image: "/src/assets/images/image5.jpeg",
+      image: "./src/assets/images/image5.jpeg",
     },
   ]);
 
