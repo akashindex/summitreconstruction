@@ -29,7 +29,7 @@ function Navbar() {
         <Navtop />
       </div>
       <nav className="font-worksans bg-[#333447]">
-        <div className="md:w-[1200px] mx-auto py-[15px] max-sm:px-4">
+        <div className="md:w-[1200px] mx-auto py-[15px] max-sm:px-4 max-sm:w-[100%]">
           <div className="flex justify-between items-center">
             {/* Logo */}
             <div>
