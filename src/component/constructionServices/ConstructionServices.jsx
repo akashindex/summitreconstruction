@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
-import image1 from "/images/image0.jpeg"
-import image2 from "/images/image1.jpeg"
-import image3 from "/images/image2.jpeg"
-import image4 from "/images/image3.jpeg"
-import image5 from "/images/image4.jpeg"
-import image6 from "/images/image5.jpeg"
+import image1 from "../../assets/images/image0.jpeg"
+import image2 from "../../assets/images/image1.jpeg"
+import image3 from "../../assets/images/image2.jpeg"
+import image4 from "../../assets/images/image3.jpeg"
+import image5 from "../../assets/images/image4.jpeg"
+import image6 from "../../assets/images/image5.jpeg"
+import { Link } from "react-router-dom";
+
 
 
 const ConstructionServices = () => {
