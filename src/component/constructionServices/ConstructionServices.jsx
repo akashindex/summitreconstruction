@@ -1,36 +1,37 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const ConstructionServices = () => {
   const [services, setServices] = useState([
     {
       title: "Mitigation and restoration",
-      description: "We identify and repair construction defects to ensure the durability and safety of your building.",
+      description: "We assess and resolve construction issues to enhance the strength, safety, and longevity of your building.",
       image: "/src/assets/images/image0.jpeg",
     },
     {
       title: "Flooring/carpet",
-      description: "Complete structural rehabilitation including roofing, siding, plumbing, and electrical repairs.",
+      description: "We offer expert installation and restoration of flooring and carpets, ensuring durability, style, and comfort for your space",
       image: "/src/assets/images/image1.jpeg",
     },
     {
       title: "Drywall/painting",
-      description: "Enhance your property's exterior with professional siding and trim repair services.",
+      description: "We provide professional drywall installation, repairs, and painting services to create a flawless and polished finish for your space",
             image: "/src/assets/images/image2.jpeg",
     },
     {
       title: "Interior/exterior finishing",
-      description: "We construct and waterproof decks to ensure long-lasting durability and style.",
+      description: "We deliver high-quality finishing touches for both interiors and exteriors, enhancing aesthetics, durability, and overall appeal",
             image: "/src/assets/images/image3.jpeg",
     },
     {
       title: "Framing",
-      description: "Professional installation of energy-efficient doors and windows for your property.",
+      description: "We build strong and precise structural frameworks to ensure stability, durability, and seamless construction for your project",
             image: "/src/assets/images/image4.jpeg",
     },
     
     {
       title: "Emergency services",
-      description: "Professional installation of energy-efficient doors and windows for your property.",
+      description: "We provide rapid response solutions for urgent repairs and disaster recovery, ensuring safety and minimizing damage",
       image: "/src/assets/images/image5.jpeg",
     },
   ]);
@@ -50,7 +51,7 @@ const ConstructionServices = () => {
         <h1 className="text-4xl font-semibold">Our Best Services</h1>
         <div className="w-12 h-[2px] bg-black my-2"></div>
         <p className="text-[#292B37] text-lg max-w-lg px-4">
-          Our Reconstruction Crews are experts in delivering high-quality construction services.
+        Our Reconstruction Crews specialize in providing top-tier construction services with expertise and precision.
         </p>
       </div>
 
@@ -63,6 +64,7 @@ const ConstructionServices = () => {
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-[#292B37]">{service.title}</h3>
                 <p className="text-gray-600 mt-2">{service.description}</p>
+                <Link to="/contact"> <button className="my-2 bg-[#36366d] text-white text-center text-[18px] font-medium max-sm:w-full md:px-[40px] py-2 rounded ">Contact Us</button> </Link>
               </div>
             </div>
           ))}

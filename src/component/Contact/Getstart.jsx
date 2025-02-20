@@ -7,8 +7,7 @@ function Getstart() {
   return (
     <div className="p-6 font-worksans w-[1200px] max-sm:w-[100%] mx-auto mt-[30px]">
       <p className="text-[17px] text-gray-700 sm:w-[60%] mx-auto text-center">
-        <span className="text-[#f4a62a] "> <a href="#">Contact us for a FREE estimate</a></span> so we can get started at identifying the problem,
-        repairing the issue, and preventing it from happening again.
+        <span className="text-[black] "> Get a FREE estimate today! Let us assess the issue, provide expert repairs, and ensure it never happens again.</span>
       </p>
       <div className='md:flex mt-20 justify-evenly gap-5 items-center'>
         <div className="flex flex-col ">
