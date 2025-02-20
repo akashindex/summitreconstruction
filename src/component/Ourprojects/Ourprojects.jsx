@@ -32,7 +32,7 @@ function OurProjects() {
             </div>
 
             <div className="sm:w-[1200px] max-sm:w-[100%] mx-auto px-4 text-center py-12">
-                <p className="text-gray-600 sm:text-[28px] max-sm:text-[16px] leading-relaxed mb-8">
+                <p className="text-gray-600 sm:text-[22px] max-sm:text-[16px] leading-relaxed mb-8">
                     We transform spaces and revive structures with expertise and care. Our projects
                     range from restoring the beauty of historical buildings to reconstructing damaged
                     properties, all while prioritizing quality craftsmanship and customer satisfaction.
