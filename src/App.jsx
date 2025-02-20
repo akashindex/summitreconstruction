@@ -14,6 +14,7 @@ import Centralparkpage from "./pages/Centralparkpage";
 import AdminLogin from "./admin/AdminLogin";
 import AdminDashboard from "./admin/AdminDashboard";
 import PrivateRoute from "./admin/PrivateRoute";
+import AllProjects from "./admin/AllProjects";
 
 function App() {
   return (
@@ -21,21 +22,32 @@ function App() {
       <Routes>
         {/* Main Site Layout */}
         <Route path="/" element={<Layout><Home /></Layout>} />
-        <Route path="/Services" element={<Layout><Services /></Layout>} />
+        <Route path="/services" element={<Layout><Services /></Layout>} />
         <Route path="/contact" element={<Layout><Contactpage /></Layout>} />
-        <Route path="/Avebrand" element={<Layout><Brandpage /></Layout>} />
-        <Route path="/Holcomb" element={<Layout><Holcombpage /></Layout>} />
-        <Route path="/Montclair" element={<Layout><Montclairpage /></Layout>} />
+        <Route path="/avebrand" element={<Layout><Brandpage /></Layout>} />
+        <Route path="/holcomb" element={<Layout><Holcombpage /></Layout>} />
+        <Route path="/montclair" element={<Layout><Montclairpage /></Layout>} />
         <Route path="/projects" element={<Layout><Projectspage /></Layout>} />
-        <Route path="/Courtyard" element={<Layout><Courtyardpage /></Layout>} />
-        <Route path="/Sorrento" element={<Layout><Sorrentopage /></Layout>} />
-        <Route path="/Centralpark" element={<Layout><Centralparkpage /></Layout>} />
+        <Route path="/courtyard" element={<Layout><Courtyardpage /></Layout>} />
+        <Route path="/sorrento" element={<Layout><Sorrentopage /></Layout>} />
+        <Route path="/centralpark" element={<Layout><Centralparkpage /></Layout>} />
 
+        {/* Admin Routes */}
         <Route path="/admin/login" element={<AdminLogin />} />
+        
+        {/* Private Admin Routes */}
         <Route path="/admin/dashboard" element={
           <PrivateRoute>
             <AdminLayout>
               <AdminDashboard />
+            </AdminLayout>
+          </PrivateRoute>
+        } />
+
+        <Route path="/admin/project" element={
+          <PrivateRoute>
+            <AdminLayout>
+              <AllProjects />
             </AdminLayout>
           </PrivateRoute>
         } />
