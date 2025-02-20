@@ -6,7 +6,7 @@ import { MdOutlineEmail } from "react-icons/md";
 const Footer = () => {
     return (
        <>
-       <div className='bg-[#36366d] flex justify-evenly pt-[40px] text-[white] text-[17px]'>
+       <div className='bg-[#36366d] pt-[40px] px-3 text-[white] text-[17px] font-worksans grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4'>
         <div className='leading-7'>
             <p className=''>7215 SW Bonita Rd</p>
             <p className=''>​Tigard, OR 97224</p>
@@ -43,7 +43,7 @@ const Footer = () => {
               
             </ul>
         </div>
-        <div className='text-right text-[17px] font-normal'>
+        <div className='mt-[20px] md:text-right text-[17px] font-normal'>
             <p>OREGON LICENSE
             </p>
             <p>​#199636

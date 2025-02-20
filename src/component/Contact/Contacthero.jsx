@@ -9,7 +9,7 @@ function Contacthero() {
         >
             <div className="absolute inset-0 bg-black bg-opacity-50"></div>
             <div className="relative z-10 px-4 sm:w-[60%] mx-auto">
-                <h1 className="sm:text-[68px] max-sm:text-[48px]">Always Ready When You Are</h1>
+                <h1 className="md:text-[68px] max-md:text-[52px] max-sm:text-[48px]">Always Ready When You Are</h1>
                 <div className="w-[20%] bg-gray-600 h-[2px] mx-auto"></div>
                 <p className="mt-4 text-[20px]">
                 From Challenges to Solutions – We've Got You Covered
