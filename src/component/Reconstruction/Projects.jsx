@@ -5,9 +5,9 @@ import image2 from '/src/assets/images/new-10.jpeg';
 import image3 from '/src/assets/images/new-4.jpeg';
 
 const projects = [
-    { image: image1, title: "92nd Ave", link: "/Avebrand" },
-    { image: image2, title: "Holcomb Drive", link: "/Holcomb" },
-    { image: image3, title: "MontClair Trance", link: "/Montclair" }
+    { id: "92ndAve", image: image1, title: "92nd Ave" },
+    { id: "Holcomb", image: image2, title: "Holcomb Drive" },
+    { id: "Montclair", image: image3, title: "MontClair Trance" }
 ];
 
 function Projects() {
@@ -19,10 +19,10 @@ function Projects() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-3 px-6">
-                {projects.map((project, index) => (
+                {projects.map((project) => (
                     <Link 
-                        key={index} 
-                        to={project.link} 
+                        key={project.id} 
+                        to={`/projects/${project.id}`} 
                         className="w-full h-[300px] bg-cover bg-center relative group"
                         style={{ backgroundImage: `url(${project.image})` }}
                     >

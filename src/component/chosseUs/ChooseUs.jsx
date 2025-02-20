@@ -10,7 +10,7 @@ const ChooseUs = () => {
         {
             icon: <FaRegLightbulb className="text-2xl"/>, 
             title: "Knowledge",
-            content: "Our company owner, project managers and carpenters have decades of experience working in the construction defect repair industry giving them the ability to find a solution for each and every client’s unique concerns.",
+            content: "Our team of experienced owners, project managers, and carpenters bring decades of expertise in construction defect repair, ensuring tailored solutions for every client's unique needs.",
         },
         {
             icon: <FiMessageCircle className="text-2xl"/>, 

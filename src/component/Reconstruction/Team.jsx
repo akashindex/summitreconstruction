@@ -29,13 +29,13 @@ function Team() {
         </p>
 
         {/* Buttons */}
-        <div className="mt-6 flex max-sm:flex-col justify-center gap-4">
-          <button className="flex-1 bg-[#fea905] text-[18px] text-white py-2 px-6 rounded transition">
+        <div className="mt-6 flex max-sm:flex-row justify-center gap-4">
+          <button className="flex-1 bg-[white] text-[18px] text-black py-2 px-6 rounded transition">
             Learn More
           </button>
           <Link
             to="/Contact"
-            className="flex-1 bg-[#fea905] text-[18px] text-white py-2 px-6 rounded transition"
+            className="flex-1 bg-[white] text-[18px] text-black py-2 px-6 rounded transition"
           >
             Contact Us
           </Link>

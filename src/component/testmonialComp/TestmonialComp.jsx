@@ -18,7 +18,7 @@ const TestmonialComp = () => {
           Meadowbrook Apartments
         </p>
       </div>
-      <button className="bg-[#FFAA06] text-[white] text-center mt-[20px] px-[20px] py-[10px] text-[14px] font-semibold">
+      <button className="bg-[white] text-[black] text-center mt-[20px] px-[20px] py-[10px] text-[14px] font-semibold">
         READ MORE FROM OUR HAPPY CUSTOMERS
       </button>
     </div>
