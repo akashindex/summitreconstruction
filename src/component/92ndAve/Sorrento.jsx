@@ -2,9 +2,9 @@
   import Gallery from '../92ndAve/Gallery';
   import Testimonials from "./Testimonials";
   import brandbg from '../../assets/images/brandbg.jpg';
-  import Sorrento1 from '../../assets/images/Sorrento1.jpg'
-  import Sorrento2 from '../../assets/images/Sorrento2.jpg'
-  import Sorrento3 from '../../assets/images/Sorrento3.jpg'
+  import Sorrento1 from '../../assets/images/sorrento-fi.jpg'
+  import Sorrento2 from '../../assets/images/sorrento2.jpg'
+  import Sorrento3 from '../../assets/images/sorrento3.jpg'
   import Sorrento4 from '../../assets/images/courtyard4.jpg'
   import Sorrento5 from '../../assets/images/courtyard5.jpg'
   import Sorrento6 from '../../assets/images/courtyard6.jpg'
