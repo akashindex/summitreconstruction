@@ -1,38 +1,52 @@
 import React, { useState, useEffect } from "react";
+import image1 from "../../assets/images/image0.jpeg"
+import image2 from "../../assets/images/image1.jpeg"
+import image3 from "../../assets/images/image2.jpeg"
+import image4 from "../../assets/images/image3.jpeg"
+import image5 from "../../assets/images/image4.jpeg"
+import image6 from "../../assets/images/image5.jpeg"
 import { Link } from "react-router-dom";
+
+
 
 const ConstructionServices = () => {
   const [services, setServices] = useState([
     {
       title: "Mitigation and restoration",
-      description: "We assess and resolve construction issues to enhance the strength, safety, and longevity of your building.",
-      image: "./src/assets/images/image0.jpeg",
+      description:
+        "We identify and repair construction defects to ensure the durability and safety of your building.",
+      image: image1,
     },
     {
       title: "Flooring/carpet",
-      description: "We offer expert installation and restoration of flooring and carpets, ensuring durability, style, and comfort for your space",
-      image: "./src/assets/images/image1.jpeg",
+      description:
+        "Complete structural rehabilitation including roofing, siding, plumbing, and electrical repairs.",
+      image: image2,
     },
     {
       title: "Drywall/painting",
-      description: "We provide professional drywall installation, repairs, and painting services to create a flawless and polished finish for your space",
-            image: "./src/assets/images/image2.jpeg",
+      description:
+        "Enhance your property's exterior with professional siding and trim repair services.",
+      image: image3,
     },
     {
       title: "Interior/exterior finishing",
-      description: "We deliver high-quality finishing touches for both interiors and exteriors, enhancing aesthetics, durability, and overall appeal",
-            image: "./src/assets/images/image3.jpeg",
+      description:
+        "We construct and waterproof decks to ensure long-lasting durability and style.",
+      image: image4,
     },
     {
       title: "Framing",
-      description: "We build strong and precise structural frameworks to ensure stability, durability, and seamless construction for your project",
-            image: "./src/assets/images/image4.jpeg",
+      description:
+        "Professional installation of energy-efficient doors and windows for your property.",
+      image: image5,
     },
-    
+
     {
       title: "Emergency services",
-      description: "We provide rapid response solutions for urgent repairs and disaster recovery, ensuring safety and minimizing damage",
-      image: "./src/assets/images/image5.jpeg",
+      description:
+        "Professional installation of energy-efficient doors and windows for your property.",
+      image: image6,
     },
   ]);
 
@@ -59,10 +73,19 @@ const ConstructionServices = () => {
       <div className="container mx-auto mt-10 px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <div key={index} className="bg-white shadow-lg rounded-xl overflow-hidden transition hover:shadow-2xl">
-              <img src={service.image} alt={service.title} className="w-full h-auto object-cover" />
+            <div
+              key={index}
+              className="bg-white shadow-lg rounded-xl overflow-hidden transition hover:shadow-2xl"
+            >
+              <img
+                src={service.image}
+                alt={service.title}
+                className="w-full h-auto object-cover"
+              />
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-[#292B37]">{service.title}</h3>
+                <h3 className="text-xl font-semibold text-[#292B37]">
+                  {service.title}
+                </h3>
                 <p className="text-gray-600 mt-2">{service.description}</p>
                 <Link to="/contact"> <button className="my-2 bg-[#36366d] text-white text-center text-[18px] font-medium max-sm:w-full md:px-[40px] py-2 rounded ">Contact Us</button> </Link>
               </div>
