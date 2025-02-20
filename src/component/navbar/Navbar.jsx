@@ -29,7 +29,7 @@ function Navbar() {
         <Navtop />
       </div>
       <nav className="font-worksans bg-[#36366d]">
-        <div className="md:w-[1200px] mx-auto py-[15px] max-sm:px-4 max-sm:w-[100%]">
+        <div className=" mx-auto py-[15px] max-sm:px-4 w-[100%]">
           <div className="flex justify-between items-center">
             {/* Logo */}
             <div>
@@ -114,7 +114,7 @@ function Navbar() {
             {/* Mobile Services Dropdown */}
             <div
               onClick={() => handleMobileDropdownToggle("services")}
-              className="block text-white flex justify-between items-center cursor-pointer py-2"
+              className=" text-white flex justify-between items-center cursor-pointer py-2"
             >
               Services <MdKeyboardArrowDown className="text-white" />
             </div>

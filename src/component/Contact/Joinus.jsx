@@ -17,7 +17,7 @@ function Joinus() {
       className="font-worksans bg-black bg-opacity-50 py-16 px-6 text-center"
       style={{ backgroundImage: `url(${bgjoinus})` }}
     >
-      <div className="sm:w-[40%] mx-auto">
+      <div className="lg:w-[40%] mx-auto">
         <h2 className="sm:text-[44px] text-gray-900 uppercase">
           J&R NW Construction
         </h2>
