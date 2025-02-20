@@ -8,7 +8,7 @@ const TestmonialComp = () => {
         <div className="bg-white w-[55%] h-[1px] my-[16px]"></div>
       </div>
       <div className="md:w-[683px] h-[176px] flex justify-center flex-col gap-[10px]">
-        <p className="text-center text-[20px] text-black font-normal">
+        <p className="text-center text-[20px] text-white font-normal">
           "We are very pleased with the final product after painting of our
           condos at Bankside. We want to particularly complement Omar and his
           work crew.
