@@ -10,7 +10,7 @@ function Getstart() {
         <span className="text-[black] "> Get a FREE estimate today! Let us assess the issue, provide expert repairs, and ensure it never happens again.</span>
       </p>
       <div className='flex mt-20 justify-evenly gap-5 items-center md:flex-row max-sm:flex-col max-md:flex-col'>
-        <div className="flex flex-col mx-auto w-[100%]">
+        <div className="flex flex-col mx-auto sm:w-[60%] max-sm:w-[100%]">
           <div class="sm:w-[400px] h-64 sm:h-80 md:h-96 lg:h-[400px] max-md:mx-auto">
             <iframe
               title="Google Map"
