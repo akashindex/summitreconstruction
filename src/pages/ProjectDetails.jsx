@@ -4,42 +4,31 @@ import Testimonials from "../component/92ndAve/Testimonials";
 import Gallery from '../component/92ndAve/Gallery';
 import brandbg from '../assets/images/brandbg.jpg';
 
+// Import images correctly
+import new1 from '../assets/images/new-1.jpeg';
+import new2 from '../assets/images/new-2.jpeg';
+import new4 from '../assets/images/new-4.jpeg';
+import new5 from '../assets/images/new-5.jpeg';
+import new6 from '../assets/images/new-6.jpeg';
+import new7 from '../assets/images/new-7.jpeg';
+import new8 from '../assets/images/new-8.jpeg';
+import new9 from '../assets/images/new-9.jpeg';
+
 const projectData = {
     "92ndAve": {
         title: "92nd Ave",
         description: "Project details for 92nd Ave...",
-        images: [
-            '/src/assets/images/new-1.jpeg',
-            '/src/assets/images/new-2.jpeg',
-            '/src/assets/images/new-4.jpeg',
-            '/src/assets/images/new-4.jpeg',
-            '/src/assets/images/new-5.jpeg',
-            '/src/assets/images/new-6.jpeg'
-        ]
+        images: [new1, new2, new4, new4, new5, new6]
     },
     "Holcomb": {
         title: "Holcomb Drive",
         description: "Project details for Holcomb Drive...",
-        images: [
-            '/src/assets/images/new-4.jpeg',
-            '/src/assets/images/new-5.jpeg',
-            '/src/assets/images/new-6.jpeg',
-            '/src/assets/images/new-1.jpeg',
-            '/src/assets/images/new-2.jpeg',
-            '/src/assets/images/new-4.jpeg',
-        ]
+        images: [new4, new5, new6, new1, new2, new4]
     },
     "Montclair": {
         title: "MontClair Terrace",
         description: "Project details for MontClair Terrace...",
-        images: [
-            '/src/assets/images/new-7.jpeg',
-            '/src/assets/images/new-8.jpeg',
-            '/src/assets/images/new-9.jpeg',
-            '/src/assets/images/new-1.jpeg',
-            '/src/assets/images/new-2.jpeg',
-            '/src/assets/images/new-4.jpeg',
-        ]
+        images: [new7, new8, new9, new1, new2, new4]
     }
 };
 
