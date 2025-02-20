@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';  
-import image1 from '/src/assets/images/92brand.jpg';
-import image2 from '/src/assets/images/holcombdrive.jpg';
-import image3 from '/src/assets/images/mtclair7.jpg';
+import image1 from '/src/assets/images/new-8.jpeg';
+import image2 from '/src/assets/images/new-10.jpeg';
+import image3 from '/src/assets/images/new-4.jpeg';
 
 const projects = [
     { image: image1, title: "92nd Ave", link: "/Avebrand" },
