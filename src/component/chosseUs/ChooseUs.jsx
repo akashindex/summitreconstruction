@@ -15,12 +15,12 @@ const ChooseUs = () => {
         {
             icon: <FiMessageCircle className="text-2xl"/>, 
             title: "Communication",
-            content: "We remain engaged throughout the entire process with incredible attention to detail. Our goal is to complete your project ahead of schedule and under budget. Check out our testimonials and see for yourself!",
+            content: "We remain engaged throughout the entire process with incredible attention to detail. Our goal is to complete your project ahead of schedule and under budget. Check out our testimonials and see for yourself!"
         },
         {
             icon: <BsEmojiSmile className="text-2xl"/>, 
             title: "Satisfaction",
-            content: "We take pride in maintaining a reputation of being friendly, accommodating and transparent with our clients. We continually rise above expectations ensuring all needs are met and client satisfaction is achieved.",
+            content: "We take pride in maintaining a reputation for being friendly, accommodating, and transparent with our clients. We consistently exceed expectations, ensuring all needs are met and client satisfaction is achieved.",
         },
     ];
 
@@ -38,7 +38,7 @@ const ChooseUs = () => {
                         key={index}
                         className={`py-2 px-4 flex items-center text-lg font-semibold focus:outline-none transition-colors duration-300  ${
                             activeTab === index
-                                ? "bg-[#FFAA06] text-white"
+                                ? "bg-[white] text-black"
                                 : "text-white bg-[#404353] hover:text-[black]"
                         }`}
                         onClick={() => setActiveTab(index)}
@@ -57,7 +57,7 @@ const ChooseUs = () => {
                     <p className="transition-opacity duration-500">{tabContent[activeTab].content}</p>
                 </div>
                 <div className="pt-[40px]">
-                    <button className="px-4 py-2 bg-[#FFAA06] text-white hover:bg-yellow-600">
+                    <button className="px-4 py-2 bg-[white] text-black hover:bg-yellow-600 hover:text-white">
                         <Link to="/contact">
                         LET'S WORK TOGETHER
                         </Link>
