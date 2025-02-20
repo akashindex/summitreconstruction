@@ -31,10 +31,10 @@ function Testimonials() {
     };
 
     return (
-        <section className="bg-white dark:bg-gray-900 py-10 w-[1200px] mx-auto">
+        <section className="bg-white dark:bg-gray-900 py-10 w-[1200px] mx-auto max-sm:w-[100%] font-worksans">
             <div className="container px-6 mx-auto">
-                <h1 className="text-[40px] font-semibold text-center text-gray-800 dark:text-white">
-                    What our <span className="text-blue-500">clients</span> say
+                <h1 className="text-[40px] text-center text-gray-800 dark:text-white">
+                    What our <span className="text-[#ffaa06]">clients</span> say
                 </h1>
 
                 <div className="grid grid-cols-1 gap-8 mx-auto mt-8 lg:grid-cols-2 xl:mt-10 max-w-7xl">
@@ -46,7 +46,7 @@ function Testimonials() {
                             <div className="flex items-center mt-6">
                                 <img className="object-cover rounded-full w-14 h-14" src={testimonial.image || "https://i.pravatar.cc/150"} alt={testimonial.name} />
                                 <div className="mx-4">
-                                    <h1 className="font-semibold text-blue-500">{testimonial.name}</h1>
+                                    <h1 className="text-blue-500">{testimonial.name}</h1>
                                     <span className="text-sm text-gray-500 dark:text-gray-300">{testimonial.position}</span>
                                 </div>
                             </div>
@@ -54,13 +54,13 @@ function Testimonials() {
                     ))}
                 </div>
 
-                <div className="mt-10 max-w-lg mx-auto">
-                    <h2 className="text-xl font-semibold text-center text-gray-800 dark:text-white">Add Your Review</h2>
+                <div className="mt-10 md:w-[40%] mx-auto">
+                    <h2 className="text-[28px] text-center text-gray-800 dark:text-white">Add Your Review</h2>
                     <form className="mt-4 bg-gray-100 p-4 rounded-lg dark:bg-gray-800" onSubmit={handleSubmit}>
                         <input 
                             type="text" 
                             placeholder="Your Name" 
-                            className="w-full p-2 mb-2 rounded" 
+                            className="w-full p-2 mb-2 rounded outline-none " 
                             value={newReview.name} 
                             onChange={(e) => setNewReview({ ...newReview, name: e.target.value })} 
                             required
@@ -68,13 +68,13 @@ function Testimonials() {
                         <input 
                             type="text" 
                             placeholder="Your Position (Optional)" 
-                            className="w-full p-2 mb-2 rounded" 
+                            className="w-full p-2 mb-2 rounded outline-none" 
                             value={newReview.position} 
                             onChange={(e) => setNewReview({ ...newReview, position: e.target.value })} 
                         />
                         <textarea 
                             placeholder="Your Review" 
-                            className="w-full p-2 mb-2 rounded" 
+                            className="w-full p-2 mb-2 rounded outline-none resize-none" 
                             value={newReview.quote} 
                             onChange={(e) => setNewReview({ ...newReview, quote: e.target.value })} 
                             required
@@ -82,7 +82,7 @@ function Testimonials() {
                         <input 
                             type="url" 
                             placeholder="Image URL (Optional)" 
-                            className="w-full p-2 mb-2 rounded" 
+                            className="w-full p-2 mb-2 rounded outline-none" 
                             value={newReview.image} 
                             onChange={(e) => setNewReview({ ...newReview, image: e.target.value })} 
                         />
