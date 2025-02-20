@@ -11,7 +11,10 @@ const projectData = {
         images: [
             '/src/assets/images/new-1.jpeg',
             '/src/assets/images/new-2.jpeg',
-            '/src/assets/images/new-4.jpeg'
+            '/src/assets/images/new-4.jpeg',
+            '/src/assets/images/new-4.jpeg',
+            '/src/assets/images/new-5.jpeg',
+            '/src/assets/images/new-6.jpeg'
         ]
     },
     "Holcomb": {
@@ -20,7 +23,10 @@ const projectData = {
         images: [
             '/src/assets/images/new-4.jpeg',
             '/src/assets/images/new-5.jpeg',
-            '/src/assets/images/new-6.jpeg'
+            '/src/assets/images/new-6.jpeg',
+            '/src/assets/images/new-1.jpeg',
+            '/src/assets/images/new-2.jpeg',
+            '/src/assets/images/new-4.jpeg',
         ]
     },
     "Montclair": {
@@ -29,7 +35,10 @@ const projectData = {
         images: [
             '/src/assets/images/new-7.jpeg',
             '/src/assets/images/new-8.jpeg',
-            '/src/assets/images/new-9.jpeg'
+            '/src/assets/images/new-9.jpeg',
+            '/src/assets/images/new-1.jpeg',
+            '/src/assets/images/new-2.jpeg',
+            '/src/assets/images/new-4.jpeg',
         ]
     }
 };
