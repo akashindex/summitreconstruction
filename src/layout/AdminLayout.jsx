@@ -1,4 +1,4 @@
-import AdminSidebar from "../admin/AddSideBar";
+import AdminSidebar from "../admin/AdminSidebar";
 
 const AdminLayout = ({ children }) => {
   const handleLogout = () => {

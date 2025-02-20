@@ -9,8 +9,8 @@ const AdminDashboard = () => {
   const [projectDescription, setProjectDescription] = useState("");
   const [projectImages, setProjectImages] = useState([]);
   const [serviceName, setServiceName] = useState("");
-const [serviceDescription, setServiceDescription] = useState("");
-const [serviceImages, setServiceImages] = useState([]);
+  const [serviceDescription, setServiceDescription] = useState("");
+  const [serviceImages, setServiceImages] = useState([]);
 
   const [isProjectModalOpen, setIsProjectModalOpen] = useState(false);
   const [isServiceModalOpen, setIsServiceModalOpen] = useState(false);
@@ -45,10 +45,13 @@ const [serviceImages, setServiceImages] = useState([]);
     Array.from(projectImages).forEach((image) => {
       formData.append("images", image);
     });
-  
+
     axios
       .post("http://localhost:5656/api/admin/projects", formData, {
-        headers: { Authorization: `Bearer ${token}`, "Content-Type": "multipart/form-data" },
+        headers: {
+          Authorization: `Bearer ${token}`,
+          "Content-Type": "multipart/form-data",
+        },
       })
       .then(() => {
         alert("Project added successfully!");
@@ -67,10 +70,13 @@ const [serviceImages, setServiceImages] = useState([]);
     Array.from(serviceImages).forEach((image) => {
       formData.append("images", image);
     });
-  
+
     axios
       .post("http://localhost:5656/api/admin/services", formData, {
-        headers: { Authorization: `Bearer ${token}`, "Content-Type": "multipart/form-data" },
+        headers: {
+          Authorization: `Bearer ${token}`,
+          "Content-Type": "multipart/form-data",
+        },
       })
       .then(() => {
         alert("Service added successfully!");
@@ -85,10 +91,10 @@ const [serviceImages, setServiceImages] = useState([]);
   return (
     <div className="flex">
       {/* Main Content */}
-      <div className="flex-1 bg-gray-100 p-8">
+      <div className="flex-1 bg-gray-100 p-8 md:mt-0 mt-10 ">
         {adminData ? (
           <div>
-            <div className="bg-white p-8 rounded-lg shadow-lg mb-6">
+            <div className="bg-white p-8 rounded-lg shadow-lg mb-6 ">
               <h1 className="text-3xl font-semibold text-gray-800">
                 Welcome, {adminData.admin.email}
               </h1>
@@ -113,139 +119,146 @@ const [serviceImages, setServiceImages] = useState([]);
               </button>
             </div>
 
-            {/* All Services Table */}
-            <div className="bg-white p-6 rounded-lg shadow-md">
+           
+            <div className="bg-white p-6 rounded-lg shadow-md md:mt-0 mt-10">
               <h2 className="text-xl font-bold text-gray-800 mb-4">
                 All Projects
               </h2>
-              <table className="w-full border-collapse border border-gray-300">
-                <thead>
-                  <tr className="bg-gray-200">
-                    <th className="border border-gray-300 p-2">ID</th>
-                    <th className="border border-gray-300 p-2">Service Name</th>
-                    <th className="border border-gray-300 p-2">Description</th>
-                    <th className="border border-gray-300 p-2">Created at</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {users.length > 0 ? (
-                    users.map((user) => (
-                      <tr key={user.id} className="text-center">
-                        <td className="border border-gray-300 p-2">{user.id}</td>
-                        <td className="border border-gray-300 p-2">
-                          {user.name}
-                        </td>
-                        <td className="border border-gray-300 p-2">
-                          {user.email}
-                        </td>
-                        <td className="border border-gray-300 p-2">
-                          {user.role}
+              <div className="max-h-96 ">
+                {" "}
+                {/* Add this wrapper */}
+                <table className="w-full border-collapse border border-gray-300 overflow-scroll" >
+                  <thead className="sticky top-0 bg-gray-200">
+                    <tr>
+                      <th className="border border-gray-300 p-2">ID</th>
+                      <th className="border border-gray-300 p-2">
+                        Service Name
+                      </th>
+                      <th className="border border-gray-300 p-2">
+                        Description
+                      </th>
+                      <th className="border border-gray-300 p-2">Created at</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {users.length > 0 ? (
+                      users.map((user) => (
+                        <tr key={user.id} className="text-center">
+                          <td className="border border-gray-300 p-2">
+                            {user.id}
+                          </td>
+                          <td className="border border-gray-300 p-2">
+                            {user.name}
+                          </td>
+                          <td className="border border-gray-300 p-2">
+                            {user.email}
+                          </td>
+                          <td className="border border-gray-300 p-2">
+                            {user.role}
+                          </td>
+                        </tr>
+                      ))
+                    ) : (
+                      <tr>
+                        <td
+                          colSpan="4"
+                          className="text-center text-gray-600 p-4"
+                        >
+                          No services found
                         </td>
                       </tr>
-                    ))
-                  ) : (
-                    <tr>
-                      <td
-                        colSpan="4"
-                        className="text-center text-gray-600 p-4"
-                      >
-                        No services found
-                      </td>
-                    </tr>
-                  )}
-                </tbody>
-              </table>
+                    )}
+                  </tbody>
+                </table>
+              </div>
             </div>
 
             {/* Project Modal */}
-           {/* Project Modal */}
-{/* Project Modal */}
-{isProjectModalOpen && (
-  <div className="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50">
-    <div className="bg-white p-6 rounded-lg shadow-lg w-96">
-      <h2 className="text-xl font-bold mb-4">Add Project</h2>
-      <input
-        type="text"
-        placeholder="Project Name"
-        value={projectName}
-        onChange={(e) => setProjectName(e.target.value)}
-        className="border p-2 w-full mb-4"
-      />
-      <textarea
-        placeholder="Project Description"
-        value={projectDescription}
-        onChange={(e) => setProjectDescription(e.target.value)}
-        className="border p-2 w-full mb-4"
-      ></textarea>
-      <input
-        type="file"
-        multiple
-        onChange={(e) => setProjectImages(e.target.files)}
-        className="border p-2 w-full mb-4"
-      />
-      <div className="flex justify-end gap-2">
-        <button
-          onClick={() => setIsProjectModalOpen(false)}
-          className="px-4 py-2 bg-gray-400 text-white rounded"
-        >
-          Cancel
-        </button>
-        <button
-          onClick={handleAddProject}
-          className="px-4 py-2 bg-indigo-600 text-white rounded"
-        >
-          Add
-        </button>
-      </div>
-    </div>
-  </div>
-)}
-
-
+            {/* Project Modal */}
+            {/* Project Modal */}
+            {isProjectModalOpen && (
+              <div className="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50">
+                <div className="bg-white p-6 rounded-lg shadow-lg w-96">
+                  <h2 className="text-xl font-bold mb-4">Add Project</h2>
+                  <input
+                    type="text"
+                    placeholder="Project Name"
+                    value={projectName}
+                    onChange={(e) => setProjectName(e.target.value)}
+                    className="border p-2 w-full mb-4"
+                  />
+                  <textarea
+                    placeholder="Project Description"
+                    value={projectDescription}
+                    onChange={(e) => setProjectDescription(e.target.value)}
+                    className="border p-2 w-full mb-4"
+                  ></textarea>
+                  <input
+                    type="file"
+                    multiple
+                    onChange={(e) => setProjectImages(e.target.files)}
+                    className="border p-2 w-full mb-4"
+                  />
+                  <div className="flex justify-end gap-2">
+                    <button
+                      onClick={() => setIsProjectModalOpen(false)}
+                      className="px-4 py-2 bg-gray-400 text-white rounded"
+                    >
+                      Cancel
+                    </button>
+                    <button
+                      onClick={handleAddProject}
+                      className="px-4 py-2 bg-indigo-600 text-white rounded"
+                    >
+                      Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            )}
 
             {/* Service Modal */}
-           {/* Service Modal */}
-{isServiceModalOpen && (
-  <div className="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50">
-    <div className="bg-white p-6 rounded-lg shadow-lg w-96">
-      <h2 className="text-xl font-bold mb-4">Add Service</h2>
-      <input
-        type="text"
-        placeholder="Service Name"
-        value={serviceName}
-        onChange={(e) => setServiceName(e.target.value)}
-        className="border p-2 w-full mb-4"
-      />
-      <textarea
-        placeholder="Service Description"
-        value={serviceDescription}
-        onChange={(e) => setServiceDescription(e.target.value)}
-        className="border p-2 w-full mb-4"
-      ></textarea>
-      <input
-        type="file"
-        multiple
-        onChange={(e) => setServiceImages(e.target.files)}
-        className="border p-2 w-full mb-4"
-      />
-      <div className="flex justify-end gap-2">
-        <button
-          onClick={() => setIsServiceModalOpen(false)}
-          className="px-4 py-2 bg-gray-400 text-white rounded"
-        >
-          Cancel
-        </button>
-        <button
-          onClick={handleAddService}
-          className="px-4 py-2 bg-green-600 text-white rounded"
-        >
-          Add
-        </button>
-      </div>
-    </div>
-  </div>
-)}
-
+            {/* Service Modal */}
+            {isServiceModalOpen && (
+              <div className="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50">
+                <div className="bg-white p-6 rounded-lg shadow-lg w-96">
+                  <h2 className="text-xl font-bold mb-4">Add Service</h2>
+                  <input
+                    type="text"
+                    placeholder="Service Name"
+                    value={serviceName}
+                    onChange={(e) => setServiceName(e.target.value)}
+                    className="border p-2 w-full mb-4"
+                  />
+                  <textarea
+                    placeholder="Service Description"
+                    value={serviceDescription}
+                    onChange={(e) => setServiceDescription(e.target.value)}
+                    className="border p-2 w-full mb-4"
+                  ></textarea>
+                  <input
+                    type="file"
+                    multiple
+                    onChange={(e) => setServiceImages(e.target.files)}
+                    className="border p-2 w-full mb-4"
+                  />
+                  <div className="flex justify-end gap-2">
+                    <button
+                      onClick={() => setIsServiceModalOpen(false)}
+                      className="px-4 py-2 bg-gray-400 text-white rounded"
+                    >
+                      Cancel
+                    </button>
+                    <button
+                      onClick={handleAddService}
+                      className="px-4 py-2 bg-green-600 text-white rounded"
+                    >
+                      Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         ) : (
           <p>Loading...</p>

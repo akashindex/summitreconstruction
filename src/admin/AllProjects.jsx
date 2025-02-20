@@ -103,19 +103,19 @@ const AllServices = () => {
   return (
     <div className="p-6">
       {/* Header Section */}
-      <div className="flex justify-between items-center mb-6">
+      <div className="md:flex justify-between items-center mb-6 md:mt-0 mt-10">
         <h1 className="text-3xl font-semibold">All Project</h1>
         <button
           onClick={() => setShowModal(true)}
-          className="bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition"
+          className="bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition md:mt-0 mt-6"
         >
           Add New Project
         </button>
       </div>
 
       {/* Projects Table */}
-      <div className="overflow-x-auto bg-white shadow-md rounded-lg">
-        <table className="min-w-full border border-gray-200">
+      <div className=" bg-white shadow-md rounded-lg overflow-x-auto">
+        <table className="min-w-full border border-gray-200 ">
           <thead>
             <tr className="bg-gray-200">
               <th className="py-3 px-6 border text-left">Project Title</th>
