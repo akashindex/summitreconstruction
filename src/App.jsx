@@ -10,6 +10,7 @@ import Montclairpage from "./pages/Montclairpage";
 import Projectspage from "./pages/Projectspage";
 import Courtyardpage from "./pages/Courtyardpage";
 import Sorrentopage from "./pages/Sorrentopage";
+import Centralparkpage from "./pages/Centralparkpage";
 import AdminLogin from "./admin/AdminLogin";
 import AdminDashboard from "./admin/AdminDashboard";
 import PrivateRoute from "./admin/PrivateRoute";
@@ -28,6 +29,7 @@ function App() {
         <Route path="/projects" element={<Layout><Projectspage /></Layout>} />
         <Route path="/Courtyard" element={<Layout><Courtyardpage /></Layout>} />
         <Route path="/Sorrento" element={<Layout><Sorrentopage /></Layout>} />
+        <Route path="/Centralpark" element={<Layout><Centralparkpage /></Layout>} />
 
         <Route path="/admin/login" element={<AdminLogin />} />
         <Route path="/admin/dashboard" element={

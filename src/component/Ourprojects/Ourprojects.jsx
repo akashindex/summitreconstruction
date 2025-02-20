@@ -42,7 +42,7 @@ function OurProjects() {
                 </p>
             </div>
 
-            <div className="max-w-[1200px] mx-auto grid grid-cols-2 gap-4 px-4">
+            <div className="max-w-[1200px] mx-auto grid grid-cols-2 gap-4 px-4 mb-10">
                 {images.map((image, index) => (
                     <Link key={index} to={image.link} className="relative overflow-hidden group cursor-pointer block">
 
