@@ -27,7 +27,7 @@ const ConstructionServices = () => {
       title: "Drywall/painting",
       description:
         "Enhance your property's exterior with professional siding and trim repair services.",
-      image: image3,
+      image: image5,
     },
     {
       title: "Interior/exterior finishing",
