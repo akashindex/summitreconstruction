@@ -32,7 +32,7 @@ function Navbar() {
         <div className=" mx-auto py-[15px] md:px-40 max-sm:px-4 w-[100%]">
           <div className="flex justify-between items-center">
             {/* Logo */}
-            <div>
+            <div className="h-[53px] flex items-center">
               {/* <img src={logo} alt="Logo" className="h-[53px] w-[100px]" /> */}
               <h2 className="text-white">Your Logo</h2>
             </div>
