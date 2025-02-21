@@ -6,10 +6,11 @@ import logo from "../../assets/images/download.png";
 const Footer = () => {
   return (
     <>
-      <div className="bg-[#36366d] pt-[40px] px-40 py-8 text-[white] text-[17px] font-worksans grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
+      <div className="bg-[#001F3F] pt-[40px] px-40 py-8 text-[white] text-[17px] font-worksans grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
         <div className="leading-7">
           <div>
-            <img src={logo} alt="Logo" className="h-[53px] w-[100px]" />
+            {/* <img src={logo} alt="Logo" className="h-[53px] w-[100px]" /> */}
+            <h2 className="text-white">Your Logo</h2>
           </div>
           <div className="flex pt-[30px] gap-[20px]">
             <div className="px-[15px] py-[15px] rounded-full bg-[white] text-[#333645]">

@@ -56,7 +56,7 @@ function ProjectDetails() {
     }
 
     return (
-        <div>
+        <div className='bg-primary py-6'>
             <Gallery
                 title={project.title}
                 description={project.description}

@@ -20,7 +20,7 @@ const images = [
 
 function OurProjects() {
     return (
-        <section>
+        <section className='bg-primary'>
 
             <div
                 className="bg-cover bg-center h-[40vh] flex items-center font-worksans justify-center text-center text-white"
@@ -33,7 +33,7 @@ function OurProjects() {
             </div>
 
             <div className="sm:w-[1200px] max-sm:w-[100%] mx-auto px-4 text-center py-12">
-                <p className="text-gray-600 sm:text-[22px] max-sm:text-[16px] leading-relaxed mb-8">
+                <p className="text-white sm:text-[22px] max-sm:text-[16px] leading-relaxed mb-8">
                     We transform spaces and revive structures with expertise and care. Our projects
                     range from restoring the beauty of historical buildings to reconstructing damaged
                     properties, all while prioritizing quality craftsmanship and customer satisfaction.
@@ -43,7 +43,7 @@ function OurProjects() {
                 </p>
             </div>
 
-            <div className="sm:max-w-[1200px] mx-auto grid grid-cols-2 sm:gap-4 max-sm:gap-1 px-4 mb-10">
+            <div className="sm:max-w-[1200px] mx-auto grid grid-cols-2 sm:gap-4 max-sm:gap-1 px-4 pb-8">
                 {images.map((image, index) => (
                     <Link key={index} to={image.link} className="relative overflow-hidden group cursor-pointer block">
 

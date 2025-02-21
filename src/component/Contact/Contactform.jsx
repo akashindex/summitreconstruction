@@ -141,7 +141,7 @@ function ContactForm() {
         </div>
         <button
           type="submit"
-          className="w-full bg-[#36366d] text-white py-2 rounded-md hover:bg-yellow-600"
+          className="w-full bg-primary text-white py-2 rounded-md hover:bg-yellow-600"
           disabled={isSubmitting}
         >
           {isSubmitting ? "Submitting..." : "Submit"}

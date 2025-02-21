@@ -16,7 +16,7 @@ const AdminSidebar = ({ handleLogout }) => {
       </button>
 
       {/* Sidebar for large screens */}
-      <div className="w-64 bg-[#36366d] text-white h-screen p-6 hidden lg:block">
+      <div className="w-64 bg-primarytext-white h-screen p-6 hidden lg:block">
         <h2 className="text-2xl font-bold mb-8 text-center">Admin Dashboard</h2>
         <nav>
           <ul>
@@ -51,7 +51,7 @@ const AdminSidebar = ({ handleLogout }) => {
 
       {/* Sidebar for small screens */}
       {isOpen && (
-        <div className="fixed top-0 left-0 w-64 bg-[#36366d] text-white h-screen p-6 z-40">
+        <div className="fixed top-0 left-0 w-64 bg-primarytext-white h-screen p-6 z-40">
         
           <h2 className="text-2xl font-bold mb-8 md:in-line hidden">Admin Dashboard</h2>
           <nav>

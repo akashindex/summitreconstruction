@@ -9,13 +9,13 @@ function Gallery({ title, description, images, backgroundImage }) {
                 style={{ backgroundImage: `url(${backgroundImage})` }}
             >
                 <div className="z-10 px-4 w-[60%] mx-auto">
-                    <h1 className="md:text-[48px] sm-max:text-[38px]">{title}</h1>
+                    <h1 className="md:text-[48px] sm-max:text-[38px] tx">{title}</h1>
                 </div>
             </div>
 
             {/* Gallery Section */}
             <div className=" md:max-w-[1200px] mx-auto px-4 max-sm:w-[100%]">
-                <h2 className="text-[26px] my-5">{description}</h2>
+                <h2 className="text-[26px] my-5 text-white">{description}</h2>
                 
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 my-10">
                     {images.map((image, index) => (

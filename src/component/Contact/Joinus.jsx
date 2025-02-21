@@ -42,7 +42,7 @@ function Joinus() {
         </ul>
 
         {/* Apply Button */}
-        <button className="mt-6 bg-[#36366d] p-[10px] text-white text-[14px] w-full transition duration-300">
+        <button className="mt-6 bg-primary p-[10px] text-white text-[14px] w-full transition duration-300">
           <Link to="/contact">Contact Us</Link>
         </button>
       </div>

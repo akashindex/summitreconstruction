@@ -25,7 +25,7 @@ const ChooseUs = () => {
     ];
 
     return (
-        <div className="bg-[#292B37] pb-[50px] font-worksans">
+        <div className="bg-primary pb-[50px] font-worksans border-white  border-t-2 border-b-2">
             <div className="flex flex-col gap-6 py-20 items-center">
                 <h2 className="text-4xl font-normal text-white">WHY CHOOSE US?</h2>
                 <div className="w-full max-w-xs h-[1px] bg-white"></div>

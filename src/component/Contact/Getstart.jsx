@@ -5,11 +5,11 @@ import { TiSocialFacebook } from "react-icons/ti";
 
 function Getstart() {
   return (
-    <div className="p-6 font-worksans lg:w-[1200px] w-[100%] mx-auto mt-[30px]">
-      <p className="text-[17px] text-gray-700 sm:w-[60%] mx-auto text-center">
-        <span className="text-[black] "> Get a FREE estimate today! Let us assess the issue, provide expert repairs, and ensure it never happens again.</span>
+    <div className="md:py-20 py-10 font-worksans bg-primary ">
+      <p className="text-[17px] text-white sm:w-[60%] mx-auto text-center">
+        <span className="text-white "> Get a FREE estimate today! Let us assess the issue, provide expert repairs, and ensure it never happens again.</span>
       </p>
-      <div className='flex mt-20 justify-evenly gap-5 items-center md:flex-row max-sm:flex-col max-md:flex-col'>
+      <div className='flex mt-20 max-w-6xl mx-auto justify-evenly gap-5 items-center md:flex-row max-sm:flex-col max-md:flex-col'>
         <div className="flex flex-col mx-auto sm:w-[60%] max-sm:w-[100%]">
           <div class="sm:w-[400px] h-64 sm:h-80 md:h-96 lg:h-[400px] max-md:mx-auto">
             <iframe
@@ -21,10 +21,10 @@ function Getstart() {
             ></iframe>
           </div>
           <div className=" max-md:mx-auto">
-            <h2 className="text-[26px] my-[20px]">J&R NW Constructionn</h2>
-            <p className="text-gray-700 font-[20px]">7215 SW Bonita Rd</p>
-            <p className="text-gray-700 font-[20px]">Tigard, OR 97224</p>
-            <p className="text-gray-700 font-[20px]">503-451-3544</p>
+            <h2 className="text-[26px] text-white my-[20px]">J&R NW Constructionn</h2>
+            <p className="text-white font-[20px]">7215 SW Bonita Rd</p>
+            <p className="text-white font-[20px]">Tigard, OR 97224</p>
+            <p className="text-white font-[20px]">503-451-3544</p>
           </div>
           <div className='bg-gray-900 w-[50px] h-[50px] rounded-full hover:bg-[#7f808b] transition duration-300 mt-5 max-md:mx-auto'>
             <TiSocialFacebook className='h-[45px] w-[45px] mx-auto mt-[2px] text-[#ffaa27] hover:text-[#292b37] transition duration-300' />

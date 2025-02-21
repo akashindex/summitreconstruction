@@ -31,7 +31,7 @@ function Testimonials() {
     };
 
     return (
-        <section className="bg-white dark:bg-gray-900 py-10 w-[1200px] mx-auto max-sm:w-[100%] font-worksans">
+        <section className="bg-white dark:bg-gray-900 py-10 w-[1170px] rounded-md py-4 mx-auto max-sm:w-[100%] font-worksans">
             <div className="container px-6 mx-auto">
                 <h1 className="text-[40px] text-center text-gray-800 dark:text-white">
                     What our <span className="text-[#ffaa06]">clients</span> say
@@ -54,8 +54,8 @@ function Testimonials() {
                     ))}
                 </div>
 
-                <div className="mt-10 md:w-[40%] mx-auto">
-                    <h2 className="text-[28px] text-center text-gray-800 dark:text-white">Add Your Review</h2>
+                <div className="mt-10 md:w-[100%] mx-auto">
+                    <h2 className="text-[28px] text-start text-gray-800 dark:text-white">Add Your Review</h2>
                     <form className="mt-4 bg-gray-100 p-4 rounded-lg dark:bg-gray-800" onSubmit={handleSubmit}>
                         <input 
                             type="text" 
@@ -86,7 +86,7 @@ function Testimonials() {
                             value={newReview.image} 
                             onChange={(e) => setNewReview({ ...newReview, image: e.target.value })} 
                         />
-                        <button type="submit" className="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600">
+                        <button type="submit" className="w-full bg-primary text-white p-2 rounded hover:bg-blue-600">
                             Submit Review
                         </button>
                     </form>

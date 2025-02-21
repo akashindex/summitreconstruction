@@ -14,7 +14,7 @@ function Home() {
 
   return (
     <>
-    <div className="px-3 grid grid-cols-1 grid-rows-3 md:grid-cols-2 md:grid-rows-2 gap-2 h-[70vh] font-worksans mb-[10px]">
+    <div className="px-3 bg-primary grid grid-cols-1 grid-rows-3 md:grid-cols-2 md:grid-rows-2 gap-2 h-[70vh] font-worksans">
       {[{ image: bgimage1, title: "Mitigation / Restoration", text: "24/7 Mitigation & Restoration" },
         { image: bgimage2, title: "Construction", text: "Specializing in HOA & multi-family repairs from small projects to full rehabs" },
         { image: bgimage3, title: "Projects", text: "Specializing in Apartment repairs from small projects to full rehabs" }

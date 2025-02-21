@@ -28,12 +28,13 @@ function Navbar() {
       <div className="bg-[#292b37]">
         <Navtop />
       </div>
-      <nav className="font-worksans bg-[#36366d]">
+      <nav className="font-worksans bg-[#001F3F]">
         <div className=" mx-auto py-[15px] md:px-40 max-sm:px-4 w-[100%]">
           <div className="flex justify-between items-center">
             {/* Logo */}
             <div>
-              <img src={logo} alt="Logo" className="h-[53px] w-[100px]" />
+              {/* <img src={logo} alt="Logo" className="h-[53px] w-[100px]" /> */}
+              <h2 className="text-white">Your Logo</h2>
             </div>
 
             {/* Desktop Navigation */}

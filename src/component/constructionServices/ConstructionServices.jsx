@@ -4,7 +4,7 @@ import image2 from "../../assets/images/image1.jpeg"
 import image3 from "../../assets/images/image2.jpeg"
 import image4 from "../../assets/images/image3.jpeg"
 import image5 from "../../assets/images/image4.jpeg"
-import image6 from "../../assets/images/image5.jpeg"
+import image6 from "../../assets/images/image5.jpg"
 import { Link } from "react-router-dom";
 
 
@@ -59,12 +59,12 @@ const ConstructionServices = () => {
   // }, []);
 
   return (
-    <div className="pt-10 pb-16 font-worksans">
+    <div className="pt-10 pb-16 font-worksans bg-primary text-white">
       {/* Heading Section */}
       <div className="flex flex-col items-center text-center">
         <h1 className="text-4xl font-semibold">Our Best Services</h1>
-        <div className="w-12 h-[2px] bg-black my-2"></div>
-        <p className="text-[#292B37] text-lg max-w-lg px-4">
+        <div className="w-12 h-[2px] bg-white my-2"></div>
+        <p className="text-white text-lg max-w-lg px-4">
         Our Reconstruction Crews specialize in providing top-tier construction services with expertise and precision.
         </p>
       </div>
@@ -87,7 +87,7 @@ const ConstructionServices = () => {
                   {service.title}
                 </h3>
                 <p className="text-gray-600 mt-2">{service.description}</p>
-                <Link to="/contact"> <button className="my-2 bg-[#36366d] text-white text-center text-[18px] font-medium max-sm:w-full md:px-[40px] py-2 rounded ">Contact Us</button> </Link>
+                <Link to="/contact"> <button className="my-2 bg-primary text-white text-center text-[18px] font-medium max-sm:w-full md:px-[40px] py-2 rounded ">Contact Us</button> </Link>
               </div>
             </div>
           ))}
