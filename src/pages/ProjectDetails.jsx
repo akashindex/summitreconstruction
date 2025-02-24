@@ -18,7 +18,7 @@ const projectData = {
     "92ndAve": {
         title: "Tabor Heights",
         description: "Project details for Tabor Heights...",
-        images: [new1, new2, new4, new4, new5, new6]
+        images: [new1, new2, new4, new4, new5]
     },
     "Holcomb": {
         title: "Holcomb Drive",
