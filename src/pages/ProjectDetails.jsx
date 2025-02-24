@@ -16,8 +16,8 @@ import new9 from '../assets/images/new-9.jpeg';
 
 const projectData = {
     "92ndAve": {
-        title: "92nd Ave",
-        description: "Project details for 92nd Ave...",
+        title: "Tabor Heights",
+        description: "Project details for Tabor Heights...",
         images: [new1, new2, new4, new4, new5, new6]
     },
     "Holcomb": {
