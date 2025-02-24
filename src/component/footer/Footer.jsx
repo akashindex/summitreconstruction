@@ -23,7 +23,7 @@ const Footer = () => {
         <div>
           <p className=" text-[17px] font-medium">Projects</p>
           <ul className=" text-[17px] font-normal flex flex-col pt-[20px] leading-7">
-            <a href="#">92nd Ave</a>
+            <a href="#">Tabor Heights</a>
             <a href="#">Holcomb Drive</a>
             <a href="#">Montclair Terrace</a>
             <a href="#">Courtyard at Springville HOA</a>
