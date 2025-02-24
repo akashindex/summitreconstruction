@@ -15,7 +15,7 @@ const ConstructionServices = () => {
       title: "Mitigation and restoration",
       description:
         "We identify and repair construction defects to ensure the durability and safety of your building.",
-      image: image1,
+      image: image4,
     },
     {
       title: "Flooring/carpet",
@@ -33,14 +33,14 @@ const ConstructionServices = () => {
       title: "Interior/exterior finishing",
       description:
         "We construct and waterproof decks to ensure long-lasting durability and style.",
-      image: image4,
+      image: image1,
     },
-    {
-      title: "Framing",
-      description:
-        "Professional installation of energy-efficient doors and windows for your property.",
-      image: image5,
-    },
+    // {
+    //   title: "Framing",
+    //   description:
+    //     "Professional installation of energy-efficient doors and windows for your property.",
+    //   image: image5,
+    // },
 
     {
       title: "Emergency services",
