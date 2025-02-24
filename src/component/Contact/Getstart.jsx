@@ -21,10 +21,10 @@ function Getstart() {
             ></iframe>
           </div>
           <div className=" max-md:mx-auto">
-            <h2 className="text-[26px] text-white my-[20px]">J&R NW Constructionn</h2>
-            <p className="text-white font-[20px]">7215 SW Bonita Rd</p>
+            <h2 className="text-[26px] text-white my-[20px]">J&R NW Construction LLC</h2>
+            {/* <p className="text-white font-[20px]">7215 SW Bonita Rd</p>
             <p className="text-white font-[20px]">Tigard, OR 97224</p>
-            <p className="text-white font-[20px]">503-451-3544</p>
+            <p className="text-white font-[20px]">503-451-3544</p> */}
           </div>
           <div className='bg-gray-900 w-[50px] h-[50px] rounded-full hover:bg-[#7f808b] transition duration-300 mt-5 max-md:mx-auto'>
             <TiSocialFacebook className='h-[45px] w-[45px] mx-auto mt-[2px] text-[#ffaa27] hover:text-[#292b37] transition duration-300' />

@@ -5,7 +5,7 @@ import image2 from '/src/assets/images/new-10.jpeg';
 import image3 from '/src/assets/images/new-4.jpeg';
 
 const projects = [
-    { id: "92ndAve", image: image1, title: "92nd Ave" },
+    { id: "92ndAve", image: image1, title: "Tabor Heights" },
     { id: "Holcomb", image: image2, title: "Holcomb Drive" },
     { id: "Montclair", image: image3, title: "MontClair Trance" }
 ];

@@ -33,7 +33,7 @@ function Avebrand() {
     return (
         <div>
         <Gallery 
-            title="92nd Ave" 
+            title="Tabor Heights" 
             description="Project Description"
             images={images} 
             backgroundImage={brandbg} 

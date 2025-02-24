@@ -10,7 +10,7 @@ import sorrento from '../../assets/images/new-10.jpeg';
 import centralpark from '../../assets/images/new-6.jpeg';
 
 const images = [
-    { src: afterKitchen, alt: "92brand", link: "/Avebrand" },
+    { src: afterKitchen, alt: "Tabor Heights", link: "/Avebrand" },
     { src: beforeKitchen, alt: "Holcomb Drive", link: "/Holcomb" },
     { src: houseRenovation, alt: "Montclair Terrace", link: "/Montclair" },
     { src: construction, alt: "Courtyard at Springville HOA", link: "/Courtyard" },
