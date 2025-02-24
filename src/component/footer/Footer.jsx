@@ -38,18 +38,16 @@ const Footer = () => {
             <a href="#">Flooring/carpet</a>
             <a href="#">Drywall/painting </a>
             <a href="#">Interior/exterior finishing </a>
-            <a href="#">Framing</a>
             <a href="#">Emergency services</a>
           </ul>
         </div>
         <div className="mt-[20px] md:text-right text-[17px] font-normal">
-          <p>OREGON LICENSE</p>
-          <p>​#199636</p>
-          <p>WASHINGTON LICENSE</p>
-          <p>J&R NW Construction</p>
+          <p>CONTRACT NUMBER</p>
+          <p>​#232708</p>
+          <p>J&R NW Construction LLC</p>
           <div className="mt-20px text-[20px] font-normal">
-            <p className="pt-[20px]">© 2025 J&R NW Construction</p>
-            <p>Reconstruction</p>
+            <p className="pt-[20px]">© 2025 J&R NW Construction LLC</p>
+            <p className="pt-[5px]">5039982340</p>
           </div>
         </div>
       </div>
