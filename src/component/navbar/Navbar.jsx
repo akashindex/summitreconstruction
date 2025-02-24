@@ -1,8 +1,11 @@
 import { useState } from "react";
-import logo from "../../assets/images/download.png";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import Navtop from "./Navtop";
 import { Link } from "react-router-dom";
+import logo from "../../assets/images/logobg.png"
+
+
+
 function Navbar() {
   const [openDropdown, setOpenDropdown] = useState(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -33,8 +36,7 @@ function Navbar() {
           <div className="flex justify-between items-center">
             {/* Logo */}
             <div className="h-[53px] flex items-center">
-              {/* <img src={logo} alt="Logo" className="h-[53px] w-[100px]" /> */}
-              <h2 className="text-white">Your Logo</h2>
+              <img src={logo} alt="Logo" className="h-[100px]" />
             </div>
 
             {/* Desktop Navigation */}
@@ -122,14 +124,12 @@ function Navbar() {
             {openDropdown === "services" && (
               <div className="bg-white py-2 w-full">
                 {[
-                  "Apartment Renovation & Repair",
-                  "Biohazard Disposal & Remediation",
-                  "Commercial Plumbing Portland",
-                  "Commercial Roofing & Siding Repair",
-                  "Deck Repair & Remediation",
-                  "Renovation & Repair for HOAs",
-                  "Water Damage Restoration",
-                  "Water, Mold, & Hazmat Remediation",
+                  "Mitigation and restoration",
+                  "Flooring/carpet",
+                  "Drywall/painting",
+                  "interior/exteroir finishing",
+                  "Framing",
+                  "Emergency services",
                 ].map((item, index) => (
                   <a
                     key={index}

@@ -1,7 +1,7 @@
 import React from "react";
 import { FaFacebookF } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
-import logo from "../../assets/images/download.png";
+import logo from "../../assets/images/logobg.png"
 
 const Footer = () => {
   return (
@@ -9,8 +9,7 @@ const Footer = () => {
       <div className="bg-[#001F3F] pt-[40px] px-40 py-8 text-[white] text-[17px] font-worksans grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
         <div className="leading-7">
           <div>
-            {/* <img src={logo} alt="Logo" className="h-[53px] w-[100px]" /> */}
-            <h2 className="text-white">Your Logo</h2>
+            <img src={logo} alt="Logo" className="h-[100px] w-[auto]" />
           </div>
           <div className="flex pt-[30px] gap-[20px]">
             <div className="px-[15px] py-[15px] rounded-full bg-[white] text-[#333645]">

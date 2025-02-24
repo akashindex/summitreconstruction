@@ -62,7 +62,7 @@ const ConstructionServices = () => {
     <div className="pt-10 pb-16 font-worksans bg-primary text-white">
       {/* Heading Section */}
       <div className="flex flex-col items-center text-center">
-        <h1 className="text-4xl font-semibold">Our Best Services</h1>
+        <h1 className="text-4xl font-semibold">Our Services</h1>
         <div className="w-12 h-[2px] bg-white my-2"></div>
         <p className="text-white text-lg max-w-lg px-4">
         Our Reconstruction Crews specialize in providing top-tier construction services with expertise and precision.
