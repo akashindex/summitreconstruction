@@ -19,6 +19,8 @@ import AllServices from "./admin/AllServices";
 import AddService from "./admin/ProjectModal";
 import Projects from "./component/Reconstruction/Projects";
 import ProjectDetails from "./pages/ProjectDetails";
+import UnapprovedReviews from "../src/admin/UnapprovedReviews";
+import Messages from "./admin/ContactMessages";
 
 function App() {
   return (
@@ -105,6 +107,8 @@ function App() {
             </Layout>
           }
         />
+        
+        <Route path="/projects/:id" element={<Layout><ProjectDetails /></Layout>} />
 
         <Route
           path="/projects"
@@ -114,14 +118,7 @@ function App() {
             </Layout>
           }
         />
-        <Route
-          path="/projects/:id"
-          element={
-            <Layout>
-              <ProjectDetails />
-            </Layout>
-          }
-        />
+       
         {/* Admin Routes */}
         <Route path="/admin/login" element={<AdminLogin />} />
         <Route path="/admin/add-service" element={<AddService />} />
@@ -163,6 +160,27 @@ function App() {
             <PrivateRoute>
               <AdminLayout>
                 <AllServices />
+              </AdminLayout>
+            </PrivateRoute>
+          }
+        />
+        {/* <Route path="/admin/unapproved-reviews" element={<UnapprovedReviews />} /> */}
+        <Route
+          path="/admin/unapproved-reviews"
+          element={
+            <PrivateRoute>
+              <AdminLayout>
+                <UnapprovedReviews />
+              </AdminLayout>
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/admin/message"
+          element={
+            <PrivateRoute>
+              <AdminLayout>
+                <Messages />
               </AdminLayout>
             </PrivateRoute>
           }

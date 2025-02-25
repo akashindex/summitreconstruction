@@ -3,7 +3,7 @@ import AdminSidebar from "../admin/AdminSidebar";
 const AdminLayout = ({ children }) => {
   const handleLogout = () => {
     localStorage.removeItem("token");
-    navigate("/");
+    navigate("/admin/login");
   };
 
   return (
