@@ -1,104 +1,58 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { FaEdit, FaTrash, FaEye, FaTimes } from "react-icons/fa";
-import axios from "axios";
 import image1 from "/src/assets/images/new-8.jpeg";
 import image2 from "/src/assets/images/new-4.jpeg";
 import image3 from "/src/assets/images/new-6.jpeg";
 
 const AllServices = () => {
-  const [projects, setProjects] = useState([
-    {
-      id: 1,
-      title: "E-Commerce Website",
-      description: "A fully functional e-commerce platform with payment integration.",
-      images: [image1],
-    },
-    {
-      id: 2,
-      title: "Portfolio Website",
-      description: "A personal portfolio website showcasing projects and skills.",
-      images: [image2],
-    },
-    {
-      id: 3,
-      title: "Task Management App",
-      description: "A productivity tool for managing daily tasks and projects.",
-      images: [image3],
-    },
-    {
-        id: 4,
-        title: "Task Management App",
-        description: "A productivity tool for managing daily tasks and projects.",
-        images: [image2],
-      },
-      {
-        id: 5,
-        title: "Task Management App",
-        description: "A productivity tool for managing daily tasks and projects.",
-        images: [image1],
-      },
-      {
-        id: 6,
-        title: "Task Management App",
-        description: "A productivity tool for managing daily tasks and projects.",
-        images: [image3],
-      },
+  const [services, setServices] = useState([
+    { id: 1, title: "E-Commerce Website", description: "A fully functional e-commerce platform with payment integration.", images: [image1] },
+    { id: 2, title: "Portfolio Website", description: "A personal portfolio website showcasing projects and skills.", images: [image2] },
+    { id: 3, title: "Task Management App", description: "A productivity tool for managing daily tasks and projects.", images: [image3] },
+    { id: 4, title: "Blog Website", description: "A dynamic blog website for sharing articles and news.", images: [image2] },
+    { id: 5, title: "Company Landing Page", description: "A modern and responsive landing page for businesses.", images: [image1] },
+    { id: 6, title: "E-Learning Platform", description: "An online learning management system with video courses.", images: [image3] },
   ]);
 
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 5;
   const [showModal, setShowModal] = useState(false);
-  const [newService, setNewService] = useState({
-    title: "",
-    description: "",
-    images: [],
-  });
+  const [newService, setNewService] = useState({ title: "", description: "", images: [] });
 
-  useEffect(() => {
-    axios
-      .get("http://localhost:5656/api/projects")
-      .then((res) => setProjects(res.data.projects || []))
-      .catch((err) => console.error("Error fetching projects:", err));
-  }, []);
-
+  // Handle Delete
   const handleDelete = (id) => {
-    if (window.confirm("Are you sure you want to delete this project?")) {
-      axios
-        .delete(`http://localhost:5656/api/projects/${id}`)
-        .then(() => {
-          setProjects(projects.filter((project) => project.id !== id));
-          alert("Project deleted successfully!");
-        })
-        .catch((err) => console.error("Error deleting project:", err));
+    if (window.confirm("Are you sure you want to delete this service?")) {
+      setServices(services.filter((service) => service.id !== id));
+      alert("Service deleted successfully!");
     }
   };
 
+  // Handle Adding New Service
   const handleAddService = () => {
-    const newProject = {
-      id: projects.length + 1,
+    const newServiceData = {
+      id: services.length + 1,
       title: newService.title,
       description: newService.description,
-      images: newService.images,
+      images: newService.images.length > 0 ? newService.images : [image1], // Default image if none uploaded
     };
 
-    setProjects([...projects, newProject]);
+    setServices([...services, newServiceData]);
     setShowModal(false);
     setNewService({ title: "", description: "", images: [] });
   };
 
+  // Handle Image Upload
   const handleImageUpload = (event) => {
     const files = Array.from(event.target.files);
     const imageUrls = files.map((file) => URL.createObjectURL(file));
-    setNewService((prev) => ({
-      ...prev,
-      images: [...prev.images, ...imageUrls],
-    }));
+    setNewService((prev) => ({ ...prev, images: [...prev.images, ...imageUrls] }));
   };
 
+  // Pagination Logic
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-  const currentItems = projects.slice(indexOfFirstItem, indexOfLastItem);
-  const totalPages = Math.ceil(projects.length / itemsPerPage);
+  const currentItems = services.slice(indexOfFirstItem, indexOfLastItem);
+  const totalPages = Math.ceil(services.length / itemsPerPage);
 
   return (
     <div className="p-6">
@@ -113,7 +67,7 @@ const AllServices = () => {
         </button>
       </div>
 
-      {/* Projects Table */}
+      {/* Services Table */}
       <div className="overflow-x-auto bg-white shadow-md rounded-lg">
         <table className="min-w-full border border-gray-200">
           <thead>
@@ -126,15 +80,15 @@ const AllServices = () => {
           </thead>
           <tbody>
             {currentItems.length > 0 ? (
-              currentItems.map((project) => (
-                <tr key={project.id} className="border">
-                  <td className="py-3 px-6">{project.title}</td>
-                  <td className="py-3 px-6">{project.description}</td>
-                  <td className="py-3 text-center">
-                    {project.images?.length > 0 && (
+              currentItems.map((service) => (
+                <tr key={service.id} className="border">
+                  <td className="py-3 px-6">{service.title}</td>
+                  <td className="py-3 px-6">{service.description}</td>
+                  <td className="py-3 px-6 text-center">
+                    {service.images?.length > 0 && (
                       <img
-                        src={project.images[0]}
-                        alt={project.title}
+                        src={service.images[0]}
+                        alt={service.title}
                         className="w-32 h-20 object-cover rounded-lg mx-auto"
                       />
                     )}
@@ -147,7 +101,7 @@ const AllServices = () => {
                       <FaEdit size={18} />
                     </button>
                     <button
-                      onClick={() => handleDelete(project.id)}
+                      onClick={() => handleDelete(service.id)}
                       className="text-red-500 hover:text-red-700 mx-2"
                     >
                       <FaTrash size={18} />
@@ -158,7 +112,7 @@ const AllServices = () => {
             ) : (
               <tr>
                 <td colSpan="4" className="py-3 px-6 text-center text-gray-500">
-                  No projects found
+                  No services found
                 </td>
               </tr>
             )}

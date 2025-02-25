@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { FaStar } from "react-icons/fa"; // Importing FontAwesome star icon
 
 const API_BASE_URL = 'http://localhost:5656'; // Adjust the base URL as needed
 
 function Testimonials({ projectId }) {
     const [testimonials, setTestimonials] = useState([]);
-    const [newReview, setNewReview] = useState({ name: "", position: "", quote: "", image: "" });
+    const [newReview, setNewReview] = useState({ name: "", quote: "", image: "", rating: 0 });
     const [message, setMessage] = useState(null);
 
     useEffect(() => {
         if (projectId) {
-            // Fetch only approved reviews for the project
             axios.get(`${API_BASE_URL}/api/projects/${projectId}/reviews`)
                 .then(response => {
                     const testimonialsWithFullImagePath = response.data.reviews.map(review => ({
@@ -25,15 +25,15 @@ function Testimonials({ projectId }) {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        if (!newReview.name || !newReview.quote) {
-            setMessage({ type: 'error', text: "Name & Review are required!" });
+        if (!newReview.name || !newReview.quote || newReview.rating === 0) {
+            setMessage({ type: 'error', text: "Name, Review & Rating are required!" });
             return;
         }
 
         const formData = new FormData();
         formData.append('name', newReview.name);
-        formData.append('position', newReview.position);
         formData.append('quote', newReview.quote);
+        formData.append('rating', newReview.rating);
         if (newReview.image) {
             formData.append('image', newReview.image);
         }
@@ -44,7 +44,7 @@ function Testimonials({ projectId }) {
                     'Content-Type': 'multipart/form-data'
                 }
             });
-            setNewReview({ name: "", position: "", quote: "", image: "" });
+            setNewReview({ name: "", quote: "", image: "", rating: 0 });
             setMessage({ type: 'success', text: 'Review submitted for approval!' });
         } catch (error) {
             console.error('Error submitting review:', error);
@@ -68,7 +68,14 @@ function Testimonials({ projectId }) {
                                 <img className="object-cover rounded-full w-14 h-14" src={testimonial.image} alt={testimonial.name} />
                                 <div className="mx-4">
                                     <h1 className="text-blue-500">{testimonial.name}</h1>
-                                    <span className="text-sm text-gray-500 dark:text-gray-300">{testimonial.position}</span>
+                                    <div className="flex">
+                                        {[...Array(5)].map((_, starIndex) => (
+                                            <FaStar 
+                                                key={starIndex}
+                                                className={`text-lg ${starIndex < testimonial.rating ? "text-yellow-500" : "text-gray-400"}`}
+                                            />
+                                        ))}
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -91,13 +98,6 @@ function Testimonials({ projectId }) {
                             onChange={(e) => setNewReview({ ...newReview, name: e.target.value })} 
                             required
                         />
-                        <input 
-                            type="text" 
-                            placeholder="Your Position (Optional)" 
-                            className="w-full p-2 mb-2 rounded outline-none" 
-                            value={newReview.position} 
-                            onChange={(e) => setNewReview({ ...newReview, position: e.target.value })} 
-                        />
                         <textarea 
                             placeholder="Your Review" 
                             className="w-full p-2 mb-2 rounded outline-none resize-none" 
@@ -105,6 +105,19 @@ function Testimonials({ projectId }) {
                             onChange={(e) => setNewReview({ ...newReview, quote: e.target.value })} 
                             required
                         />
+
+                        {/* Star Rating Selection */}
+                        <div className="flex items-center gap-2 my-2">
+                            <span className="text-gray-700 dark:text-white">Rate:</span>
+                            {[...Array(5)].map((_, index) => (
+                                <FaStar
+                                    key={index}
+                                    className={`cursor-pointer text-2xl ${index < newReview.rating ? "text-yellow-500" : "text-gray-400"}`}
+                                    onClick={() => setNewReview({ ...newReview, rating: index + 1 })}
+                                />
+                            ))}
+                        </div>
+
                         <input 
                             type="file" 
                             accept="image/*"

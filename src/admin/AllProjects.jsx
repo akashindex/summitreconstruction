@@ -6,7 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const API_BASE_URL = 'http://localhost:5656';
 
-const AllServices = () => {
+const AllProjects = () => {
   const [projects, setProjects] = useState([]);
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
@@ -432,4 +432,4 @@ const AllServices = () => {
   );
 };
 
-export default AllServices;
+export default AllProjects;
