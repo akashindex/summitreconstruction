@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Gallery({ title, description, images, backgroundImage }) {
     return (
@@ -28,6 +29,9 @@ function Gallery({ title, description, images, backgroundImage }) {
                         </div>
                     ))}
                 </div>
+            </div>
+            <div className='flex justify-center '>
+                <Link className='bg-primary text-white py-2 rounded-md hover:bg-yellow-600 py-3 px-4' to="/contact">Contact Us</Link>
             </div>
         </div>
     );
