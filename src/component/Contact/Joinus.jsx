@@ -27,7 +27,7 @@ function Joinus() {
           with us. If you're interested in any of the positions listed below,
           please complete the application and submit it in person or via email
           <a href="#" className="text-[#36366d] font-bold mx-1">
-             info@J&R NW Construction.com
+          jandrnwconstruction@gmail.com
           </a>
         </p>
 

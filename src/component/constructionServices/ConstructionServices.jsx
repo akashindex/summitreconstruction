@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import image1 from "../../assets/images/image0.jpeg"
-import image2 from "../../assets/images/image1.jpeg"
+import image2 from "../../assets/images/fire.jpeg"
 import image3 from "../../assets/images/image2.jpeg"
 import image4 from "../../assets/images/image3.jpeg"
 import image5 from "../../assets/images/image4.jpeg"
@@ -18,9 +18,9 @@ const ConstructionServices = () => {
       image: image4,
     },
     {
-      title: "Flooring/carpet",
+      title: "fire damage restoration",
       description:
-        "Complete structural rehabilitation including roofing, siding, plumbing, and electrical repairs.",
+        "Repairing or rebuilding damaged structures, replacing drywall, flooring, and repainting to restore the property to its pre-fire condition.",
       image: image2,
     },
     {

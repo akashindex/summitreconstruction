@@ -6,7 +6,7 @@ function Navtop() {
         <span className="font-bold text-[white] md:text-[18x] sm-max:text-[14px]">
         24/7 Phone | <a href="#" className="text-[white]">(503) 9982340</a>
     </span>
-    <span className="font-bold text-[white]  md:text-[18px] sm-max:text-[14px]">Info@J&R NW Construction.com</span>
+    <span className="font-bold text-[white]  md:text-[18px] sm-max:text-[14px]">jandrnwconstruction@gmail.com</span>
     </div>
   )
 }

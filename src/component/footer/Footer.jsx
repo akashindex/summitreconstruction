@@ -2,6 +2,7 @@ import React from "react";
 import { FaFacebookF } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
 import logo from "../../assets/images/logobg.png"
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -13,10 +14,20 @@ const Footer = () => {
           </div>
           <div className="flex pt-[30px] gap-[20px]">
             <div className="px-[15px] py-[15px] rounded-full bg-[white] text-[#333645]">
-              <FaFacebookF />
+              <a 
+                            href="https://www.facebook.com/JRNWConstruction" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                          >
+                            <FaFacebookF />
+                          </a>
+              
             </div>
             <div className="px-[15px] py-[15px] rounded-full bg-[white] text-[#333645]">
+              <Link to="/contact">
               <MdOutlineEmail />
+              </Link>
+             
             </div>
           </div>
         </div>
@@ -24,11 +35,10 @@ const Footer = () => {
           <p className=" text-[17px] font-medium">Projects</p>
           <ul className=" text-[17px] font-normal flex flex-col pt-[20px] leading-7">
             <a href="#">Tabor Heights</a>
-            <a href="#">Holcomb Drive</a>
-            <a href="#">Montclair Terrace</a>
-            <a href="#">Courtyard at Springville HOA</a>
-            <a href="#">Sorrento Bluff Apartments</a>
-            <a href="#">Central Park HOA</a>
+            <a href="#">gateway hearing aid</a>
+            <a href="#">palisade terr dr</a>
+            <a href="#">ne 90th ave</a>
+           
           </ul>
         </div>
         <div>
@@ -42,9 +52,9 @@ const Footer = () => {
           </ul>
         </div>
         <div className="mt-[20px] md:text-right text-[17px] font-normal">
-          <p>CONTRACT NUMBER</p>
+          <p>CCB</p>
           <p>​#232708</p>
-          <p>J&R NW Construction LLC</p>
+          <p>jandrnwconstruction@gmail.com</p>
           <div className="mt-20px text-[20px] font-normal">
             <p className="pt-[20px]">© 2025 J&R NW Construction LLC</p>
             <p className="pt-[5px]">5039982340</p>

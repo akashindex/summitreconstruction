@@ -2,7 +2,6 @@ import React from 'react';
 import ContactForm from './Contactform';
 import { TiSocialFacebook } from "react-icons/ti";
 
-
 function Getstart() {
   return (
     <div className="md:py-20 py-10 font-worksans bg-primary">
@@ -21,7 +20,13 @@ function Getstart() {
             <h2 className="text-[26px] text-white my-[20px]">J&R NW Construction LLC</h2>
           </div>
           <div className='bg-gray-900 w-[50px] h-[50px] rounded-full hover:bg-[#7f808b] transition duration-300 mt-5 max-md:mx-auto'>
-            <TiSocialFacebook className='h-[45px] w-[45px] mx-auto mt-[2px] text-[#ffaa27] hover:text-[#292b37] transition duration-300' />
+            <a 
+              href="https://www.facebook.com/JRNWConstruction" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              <TiSocialFacebook className='h-[45px] w-[45px] mx-auto mt-[2px] text-[#ffaa27] hover:text-[#292b37] transition duration-300' />
+            </a>
           </div>
         </div>
         <div>
