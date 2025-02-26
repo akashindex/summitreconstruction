@@ -86,7 +86,7 @@ function Navbar() {
               </Link>
              
               <Link to="/contact" className="text-white px-4">
-                Contact
+                Contact Us
               </Link>
             </div>
 

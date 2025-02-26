@@ -18,13 +18,13 @@ function Gallery({ title, description, images, backgroundImage }) {
             <div className=" md:max-w-[1200px] mx-auto px-4 max-sm:w-[100%]">
                 <h2 className="text-[26px] my-5 text-black">{description}</h2>
                 
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 my-10">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 my-10">
                     {images.map((image, index) => (
                         <div key={index} className="overflow-hidden flex justify-center">
                             <img 
                                 src={image} 
                                 alt={`Gallery Image ${index + 1}`} 
-                                className="object-cover w-[400px] h-[300px]"
+                                className="object-cover w-[600px] h-[300px]"
                             />
                         </div>
                     ))}

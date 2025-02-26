@@ -44,11 +44,12 @@ const Footer = () => {
         <div>
           <p className=" text-[17px] font-medium">Services</p>
           <ul className="flex flex-col pt-[20px] text-[17px] font-normal leading-7">
-            <a href="#">Mitigation and restoration </a>
-            <a href="#">Flooring/carpet</a>
-            <a href="#">Drywall/painting </a>
-            <a href="#">Interior/exterior finishing </a>
-            <a href="#">Emergency services</a>
+            <Link to="/services">Mitigation and restoration </Link>
+            <Link to="/services">Flooring/carpet</Link>
+            <Link to="/services">Drywall/painting </Link>
+            <Link to="/services">Interior/exterior finishing </Link>
+            <Link to="/services">Emergency services</Link>
+            <Link to="/services">fire damage restoration</Link>
           </ul>
         </div>
         <div className="mt-[20px] md:text-right text-[17px] font-normal">
