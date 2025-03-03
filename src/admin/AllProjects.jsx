@@ -30,11 +30,41 @@ const AllProjects = () => {
     fetchProjects();
   }, []);
 
+  // Helper function to ensure subImages is an array
+  const ensureSubImagesArray = (project) => {
+    if (!project) return project;
+    
+    let subImagesArray = [];
+    
+    if (!project.subImages) {
+      subImagesArray = [];
+    } else if (Array.isArray(project.subImages)) {
+      subImagesArray = project.subImages;
+    } else if (typeof project.subImages === 'string') {
+      try {
+        const parsed = JSON.parse(project.subImages);
+        subImagesArray = Array.isArray(parsed) ? parsed : [];
+      } catch (e) {
+        // If it can't be parsed as JSON, it's not a valid array
+        subImagesArray = [];
+      }
+    }
+    
+    return {
+      ...project,
+      subImages: subImagesArray
+    };
+  };
+
   const fetchProjects = async () => {
     try {
       setLoading(true);
       const res = await axios.get(`${API_BASE_URL}/api/projects`);
-      setProjects(res.data.projects || []);
+      
+      // Process each project to ensure subImages is an array
+      const processedProjects = (res.data.projects || []).map(ensureSubImagesArray);
+      
+      setProjects(processedProjects);
       toast.success('Projects loaded successfully', { toastId: 'load-success' });
     } catch (err) {
       console.error("Error fetching projects:", err);
@@ -49,7 +79,11 @@ const AllProjects = () => {
       setLoading(true);
       const res = await axios.get(`${API_BASE_URL}/api/projects/${id}`);
       const project = res.data.project;
-      setSelectedProject(project);
+      
+      // Process the project to ensure subImages is an array
+      const processedProject = ensureSubImagesArray(project);
+      
+      setSelectedProject(processedProject);
       setFormData({
         title: project.title,
         description: project.description,
@@ -176,10 +210,13 @@ const AllProjects = () => {
         data: { imageUrl: image }
       });
       toast.success('Sub image deleted successfully', { toastId: 'sub-delete-success' });
-      setSelectedProject(prev => ({
-        ...prev,
-        subImages: prev.subImages.filter(img => img !== image)
-      }));
+      setSelectedProject(prev => {
+        const updatedProject = ensureSubImagesArray(prev);
+        return {
+          ...updatedProject,
+          subImages: updatedProject.subImages.filter(img => img !== image)
+        };
+      });
     } catch (err) {
       console.error("Error deleting sub image:", err);
       toast.error('Failed to delete sub image', { toastId: 'sub-delete-error' });
@@ -251,7 +288,7 @@ const AllProjects = () => {
                 </td>
                 <td className="px-6 py-4">
                   <div className="flex gap-2">
-                    {project.subImages?.map((image, index) => (
+                    {Array.isArray(project.subImages) && project.subImages.map((image, index) => (
                       <img
                         key={index}
                         src={`${API_BASE_URL}/${image}`}
@@ -376,8 +413,8 @@ const AllProjects = () => {
 
               <div>
                 <label className="block mb-1 text-indigo-700">Sub Images</label>
-                {editMode && selectedProject?.subImages?.length > 0 && (
-                  <div className="flex gap-2 mb-2">
+                {editMode && selectedProject?.subImages && Array.isArray(selectedProject.subImages) && selectedProject.subImages.length > 0 && (
+                  <div className="flex flex-wrap gap-2 mb-2">
                     {selectedProject.subImages.map((image, index) => (
                       <div key={index} className="relative">
                         <img
@@ -396,13 +433,20 @@ const AllProjects = () => {
                     ))}
                   </div>
                 )}
-                <input
-                  type="file"
-                  multiple
-                  onChange={(e) => handleFileChange(e, 'subImages')}
-                  accept="image/*"
-                  className="w-full"
-                />
+                <div className="mt-2">
+                  <p className="text-sm text-gray-600 mb-1">
+                    {editMode ? 
+                      "Uploading new sub images will replace all existing ones" : 
+                      "You can select multiple images"}
+                  </p>
+                  <input
+                    type="file"
+                    multiple
+                    onChange={(e) => handleFileChange(e, 'subImages')}
+                    accept="image/*"
+                    className="w-full"
+                  />
+                </div>
               </div>
 
               <div className="flex justify-end gap-2 mt-6">

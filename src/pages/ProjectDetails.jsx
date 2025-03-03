@@ -10,30 +10,94 @@ const API_BASE_URL = 'http://localhost:5656';
 function ProjectDetails() {
   const { id } = useParams(); // Get the project ID from the URL
   const [project, setProject] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchProject = async () => {
       try {
+        setLoading(true);
         const response = await axios.get(`${API_BASE_URL}/api/projects/${id}`);
-        setProject(response.data.project);
+        
+        // Ensure project has a valid subImages array
+        const projectData = response.data.project;
+        let subImagesArray = [];
+        
+        if (projectData.subImages) {
+          if (Array.isArray(projectData.subImages)) {
+            subImagesArray = projectData.subImages;
+          } else if (typeof projectData.subImages === 'string') {
+            try {
+              const parsed = JSON.parse(projectData.subImages);
+              subImagesArray = Array.isArray(parsed) ? parsed : [];
+            } catch (e) {
+              console.log('Failed to parse subImages as JSON:', e);
+              subImagesArray = [];
+            }
+          }
+        }
+        
+        setProject({
+          ...projectData,
+          subImages: subImagesArray
+        });
+        
+        setError(null);
       } catch (error) {
         console.error('Error fetching project:', error);
+        setError('Failed to load project details. Please try again later.');
+      } finally {
+        setLoading(false);
       }
     };
 
-    fetchProject();
+    if (id) {
+      fetchProject();
+    } else {
+      setError('Invalid project ID');
+      setLoading(false);
+    }
   }, [id]);
 
-  if (!project) {
-    return <div>Loading...</div>;
+  if (loading) {
+    return (
+      <div className="flex justify-center items-center h-screen">
+        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-indigo-500"></div>
+      </div>
+    );
   }
+
+  if (error) {
+    return (
+      <div className="flex justify-center items-center h-screen">
+        <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded">
+          <p>{error}</p>
+        </div>
+      </div>
+    );
+  }
+
+  if (!project) {
+    return (
+      <div className="flex justify-center items-center h-screen">
+        <div className="bg-yellow-100 border border-yellow-400 text-yellow-700 px-4 py-3 rounded">
+          <p>Project not found</p>
+        </div>
+      </div>
+    );
+  }
+
+  // Ensure we have a valid array for the images prop
+  const imageUrls = Array.isArray(project.subImages) 
+    ? project.subImages.map(image => `${API_BASE_URL}/${image}`)
+    : [];
 
   return (
     <div>
       <GalleryApi
         title={project.title}
         description={project.description}
-        images={project.subImages.map(image => `${API_BASE_URL}/${image}`)}
+        images={imageUrls}
         backgroundImage={brandbg}
       />
       <Testimonials
