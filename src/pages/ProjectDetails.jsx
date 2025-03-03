@@ -101,7 +101,7 @@ function ProjectDetails() {
         backgroundImage={brandbg}
       />
       <Testimonials
-        projectId={id} // Pass the project ID to the Testimonials component
+        projectId={id} 
         title="What our clients say"
         description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo incidunt ex placeat modi magni quia error alias, adipisci rem similique."
         testimonials={[

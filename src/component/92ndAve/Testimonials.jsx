@@ -101,10 +101,8 @@ function Testimonials({ projectId }) {
                     ) : testimonials.length > 0 ? (
                         testimonials.map((testimonial, index) => (
                             <div key={index} className="p-6 bg-gray-100 rounded-lg dark:bg-gray-800 md:p-8">
-                                <p className="leading-loose text-gray-500 dark:text-gray-300">
-                                    "{testimonial.quote}"
-                                </p>
-                                <div className="flex items-center mt-6">
+                               
+                                <div className="flex flex-col items-start ">
                                     <img 
                                         className="object-cover rounded-full w-14 h-14" 
                                         src={testimonial.image} 
@@ -113,7 +111,7 @@ function Testimonials({ projectId }) {
                                             e.target.src = "https://i.pravatar.cc/150";
                                         }}
                                     />
-                                    <div className="mx-4">
+                                    <div className="my-3">
                                         <h1 className="text-blue-500">{testimonial.name}</h1>
                                         <div className="flex">
                                             {[...Array(5)].map((_, starIndex) => (
@@ -125,10 +123,16 @@ function Testimonials({ projectId }) {
                                                             : "text-gray-400"
                                                     }`}
                                                 />
+                                                
                                             ))}
+                                            
                                         </div>
                                     </div>
-                                </div>
+                                    <p className="leading-loose text-gray-500 dark:text-gray-300">
+                                    "{testimonial.quote}"
+                                </p>
+                                </div> 
+                              
                             </div>
                         ))
                     ) : (
