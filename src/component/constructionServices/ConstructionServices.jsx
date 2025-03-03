@@ -89,20 +89,20 @@ const ConstructionServices = () => {
             <div className="animate-spin rounded-full h-12 w-12 border-t-4 border-b-4 border-white"></div>
           </div>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <div
                 key={service.id || index}
-                className="bg-white shadow-lg rounded-xl overflow-hidden transition hover:shadow-2xl"
+                className="bg-white shadow-lg rounded-xl overflow-hidden transition hover:shadow-2xl "
               >
                 {/* Before/After Image Section */}
                 <div className="flex flex-col">
                   {/* Before Image */}
-                  <div className="relative">
+                  <div className="relative ">
                     <img
                       src={service.beforeImage ? `${API_BASE_URL}/${service.beforeImage}` : fallbackServices[index % fallbackServices.length].image}
                       alt={`${service.title} before`}
-                      className="w-full h-48 object-cover"
+                      className="w-full h-[350px] object-cover"
                       onError={(e) => {
                         e.target.onerror = null;
                         e.target.src = fallbackServices[index % fallbackServices.length].image;
@@ -118,7 +118,7 @@ const ConstructionServices = () => {
                     <img
                       src={service.afterImage ? `${API_BASE_URL}/${service.afterImage}` : fallbackServices[(index + 2) % fallbackServices.length].image}
                       alt={`${service.title} after`}
-                      className="w-full h-48 object-cover"
+                      className="w-full h-[350px] object-cover"
                       onError={(e) => {
                         e.target.onerror = null;
                         e.target.src = fallbackServices[(index + 2) % fallbackServices.length].image;
@@ -132,7 +132,7 @@ const ConstructionServices = () => {
                 
                 {/* Service Info */}
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold text-[#292B37]">
+                  <h3 className="text-xl font-semibold text-[#292B37] capitalize">
                     {service.title}
                   </h3>
                   <p className="text-gray-600 mt-2">{service.description}</p>

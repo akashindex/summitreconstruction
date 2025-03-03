@@ -45,7 +45,6 @@ const Footer = () => {
           <p className=" text-[17px] font-medium">Services</p>
           <ul className="flex flex-col pt-[20px] text-[17px] font-normal leading-7">
             <Link to="/services">Mitigation and restoration </Link>
-            <Link to="/services">Flooring/carpet</Link>
             <Link to="/services">Drywall/painting </Link>
             <Link to="/services">Interior/exterior finishing </Link>
             <Link to="/services">Emergency services</Link>

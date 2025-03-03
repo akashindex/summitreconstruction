@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { Menu, X } from "lucide-react"; // Icons for the toggle button
+import { Menu, X, LayoutDashboard, Briefcase, Wrench, Mail, EyeOff } from "lucide-react"; // Icons
 
 const AdminSidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -8,17 +8,17 @@ const AdminSidebar = () => {
   const navigate = useNavigate();
 
   const menuItems = [
-    { name: "Dashboard", path: "/admin/dashboard" },
-    { name: "Projects", path: "/admin/project" },
-    { name: "Services", path: "/admin/services" },
-    { name: "Messages", path: "/admin/message" },
-    { name: "Unapproved Reviews", path: "/admin/unapproved-reviews" },
+    { name: "Dashboard", path: "/admin/dashboard", icon: <LayoutDashboard size={20} /> },
+    { name: "Projects", path: "/admin/project", icon: <Briefcase size={20} /> },
+    { name: "Services", path: "/admin/services", icon: <Wrench size={20} /> },
+    { name: "Messages", path: "/admin/message", icon: <Mail size={20} /> },
+    { name: "Reviews Request", path: "/admin/unapproved-reviews", icon: <EyeOff size={20} /> },
   ];
 
   const handleLogout = () => {
     localStorage.removeItem("token");
     localStorage.removeItem("refreshToken");
-    navigate("/admin/login"); // Redirect to the login page immediately
+    navigate("/admin/login");
   };
 
   return (
@@ -34,20 +34,20 @@ const AdminSidebar = () => {
       {/* Sidebar for large screens */}
       <div className="w-64 bg-gradient-to-b from-gray-900 to-gray-800 text-white h-screen p-6 hidden lg:flex flex-col justify-between shadow-lg">
         <div>
-          <h2 className="text-3xl font-bold mb-8 text-center">Admin Dashboard</h2>
+          <h2 className="text-xl font-bold mb-8 text-center">Admin Dashboard</h2>
           <nav>
             <ul>
               {menuItems.map((item) => (
                 <li key={item.name} className="mb-4">
                   <Link
                     to={item.path}
-                    className={`block text-lg font-medium transition duration-300 ${
+                    className={`flex items-center gap-3 p-3 text-lg font-medium rounded-md transition duration-300 ${
                       location.pathname === item.path
-                        ? "text-indigo-400"
-                        : "hover:text-indigo-200"
+                        ? "bg-indigo-600 text-white"
+                        : "hover:bg-indigo-500 hover:text-white"
                     }`}
                   >
-                    {item.name}
+                    {item.icon} {item.name}
                   </Link>
                 </li>
               ))}
@@ -72,14 +72,14 @@ const AdminSidebar = () => {
                 <li key={item.name} className="mb-4">
                   <Link
                     to={item.path}
-                    className={`block text-red-500 text-lg font-medium transition duration-300 ${
+                    className={`flex items-center gap-3 p-3 text-lg font-medium rounded-md transition duration-300 ${
                       location.pathname === item.path
-                        ? "text-red-600"
-                        : "hover:text-red-200"
+                        ? "bg-indigo-600 text-white"
+                        : "hover:bg-indigo-500 hover:text-white"
                     }`}
                     onClick={() => setIsOpen(false)}
                   >
-                    {item.name}
+                    {item.icon} {item.name}
                   </Link>
                 </li>
               ))}
